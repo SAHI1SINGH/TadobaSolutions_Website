@@ -1,0 +1,191 @@
+<div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Our Software Solutions</h1>
+            <p>
+                Innovative, scalable, and impactful technology solutions for both software
+                development and hardware integration
+            </p>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="solutions-section section-padding">
+        <div class="container">
+            <div class="solutions-grid">
+                <div class="solution-card" *ngFor="let solution of solutions">
+                    <div class="solution-icon">
+                        <img [src]="solution.icon" alt="{{solution.name}}" />
+                    </div>
+                    <h3>{{ solution.name }}</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision-section section-padding">
+        <div class="container">
+            <div class="vision-content">
+                <h2 class="section-title">Our Vision</h2>
+                <p>
+                    " Our Software solutions prioritize user experience and encourage
+                    innovation in industrial applications. We offer innovative, scalable
+                    and impactful technology for both software development (custom web,
+                    mobile platforms) and hardware integration (embedded systems). "
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="technologies-section section-padding">
+        <div class="container">
+            <h2 class="section-title">Technologies We Work With</h2>
+
+            <div class="tech-categories">
+                <!-- Frontend Technologies -->
+                <div class="tech-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Frontend Technologies</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag" *ngFor="let tech of technologies.frontend">
+                            <span class="tech-icon">
+                                <img [src]="tech.icon" alt="{{tech.name}}" />
+                            </span>
+                            <span class="tech-name">{{ tech.name }}</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Backend Technologies -->
+                <div class="tech-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend Technologies</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag" *ngFor="let tech of technologies.backend">
+                            <span class="tech-icon">
+                                <img [src]="tech.icon" alt="{{tech.name}}" />
+                            </span>
+                            <span class="tech-name">{{ tech.name }}</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="tech-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag" *ngFor="let tech of technologies.databases">
+                            <span class="tech-icon">
+                                <img [src]="tech.icon" alt="{{tech.name}}" />
+                            </span>
+                            <span class="tech-name">{{ tech.name }}</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- AI/ML -->
+                <div class="tech-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI/ML</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag" *ngFor="let tech of technologies.aiMl">
+                            <span class="tech-icon">
+                                <img [src]="tech.icon" alt="{{tech.name}}" />
+                            </span>
+                            <span class="tech-name">{{ tech.name }}</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Hosting Platforms -->
+                <div class="tech-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Hosting Platforms</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag" *ngFor="let tech of technologies.hosting">
+                            <span class="tech-icon">
+                                <img [src]="tech.icon" alt="{{tech.name}}" />
+                            </span>
+                            <span class="tech-name">{{ tech.name }}</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section section-padding">
+        <div class="container">
+            <h2 class="section-title">Our Process</h2>
+            <div class="process-steps">
+                <div class="process-step" *ngFor="let step of processSteps; let i = index">
+                    <div class="step-icon">
+                        <img [src]="step.icon" alt="{{step.title}}" />
+                        <span>{{ i + 1 }}</span>
+                    </div>
+                    <div class="step-content">
+                        <h3>{{ step.title }}</h3>
+                        <p>{{ step.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section section-padding">
+  <div class="container">
+    <h2 class="section-title">Recent Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card" *ngFor="let project of projects">
+        <div class="project-image">
+          <img [src]="project.image" alt="{{project.title}}" />
+        </div>
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+        <span class="client-name"><b>"{{ project.client }}"</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- CTA Section -->
+    <section class="cta-section section-padding">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Bring Your Idea to Life?</h2>
+                <p>
+                    Let's discuss how our software development expertise can help your
+                    business
+                </p>
+                <button class="cta-button" (click)="sendMail()">Get in Touch</button>
+            </div>
+        </div>
+    </section>
+</div>

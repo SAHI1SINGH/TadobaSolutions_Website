@@ -1,0 +1,269 @@
+<header class="header-container">
+  <div class="header-content">
+    <div class="logo-container">
+      <a href="#" class="logo-link">
+        <img class="logo" src="./assets/images/logo.png" alt="Tadoba Logo" />
+      </a>
+      <a
+        href="https://www.ibitf.co.in/"
+        target="_blank"
+        class="partner-logo-link"
+      >
+        <img
+          class="partner-logo"
+          src="./assets/images/ibitf-logo.png"
+          alt="IBITF Logo"
+        />
+      </a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a
+            href="https://mis.tadobasolutions.com/"
+            target="_blank"
+            class="nav-link"
+          >
+            <span>MIS</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="solar-pv-plant" class="dropdown-link" class="nav-link">
+            <span>Solar PV Plant</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="digital-agri-village" class="nav-link">
+            <span>Agritech</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="our-products" class="dropdown-link" class="nav-link">
+            <span> Products</span>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown" (mouseenter)="onDropdownEnter($event)">
+          <button class="nav-link">
+            <span>Services & Maintenance</span>
+            <fa-icon [icon]="angleDown" class="dropdown-icon"></fa-icon>
+          </button>
+          <div class="dropdown-menu wide-menu">
+            <ul class="dropdown-list">
+              <li class="dropdown-item">
+                <a routerLink="water-overflow-controller" class="dropdown-link"
+                  >Water Overflow Control Solutions</a
+                >
+              </li>
+              <!-- <li class="dropdown-item">
+                                            <a class="dropdown-link">Electromechanical Product Design & Development</a>
+                                        </li> -->
+              <li class="dropdown-item">
+                <a routerLink="pcb-design-development" class="dropdown-link"
+                  >PCB Design, Development & Fabrication</a
+                >
+              </li>
+              <li class="dropdown-item">
+                <a routerLink="3d-design-printing-service" class="dropdown-link"
+                  >3D Prototype Product Design & Printing</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="career" class="nav-link">
+            <span>Career</span>
+          </a>
+        </li>
+
+        <!-- Trainings Dropdown -->
+        <!-- <li class="nav-item dropdown">
+                    <button class="nav-link">
+                        <span>Trainings & Workshops</span>
+                        <fa-icon [icon]="angleDown" class="dropdown-icon"></fa-icon>
+                    </button>
+                    <div class="dropdown-menu">
+                        <ul class="dropdown-list">
+                            <li class="dropdown-item">
+                                <a routerLink="ev-workshop" class="dropdown-link">EV & Battery Technology</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a routerLink="iiot-workshop" class="dropdown-link">IIoT with Embedded System</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a routerLink="solar-pv-plant-workshop" class="dropdown-link">Solar PV Plant
+                                    Installation & Application</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a routerLink="3d-workshop" class="dropdown-link">3D Designing & Printing</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li> -->
+
+        <!-- Simple Links -->
+
+        <!-- <li class="nav-item">
+                    <button class="desktop-signup">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#121212" viewBox="0 0 24 24" width="32"
+                            height="32">
+                            <path
+                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
+                    </button>
+                </li> -->
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" (click)="toggleMenu()">
+      <fa-icon [icon]="isMenuOpen ? closeMenu : hamBurgerMenu"></fa-icon>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" [class.active]="isMenuOpen">
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a
+          href="https://mis.tadobasolutions.com/"
+          target="_blank"
+          class="mobile-nav-link"
+        >
+          <span>MIS</span>
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a
+          routerLink="solar-pv-plant"
+          class="dropdown-link"
+          class="mobile-nav-link"
+        >
+          <span>Solar PV Plant</span>
+        </a>
+      </li>
+
+      <li class="mobile-nav-item">
+        <a routerLink="digital-agri-village" class="mobile-nav-link">
+          <span>Agritech</span>
+        </a>
+      </li>
+
+      <li class="mobile-nav-item">
+        <a routerLink="our-products" class="mobile-nav-link">
+          <span> Products</span>
+        </a>
+      </li>
+
+      <li class="mobile-nav-item accordion">
+        <button
+          class="mobile-nav-link"
+          (click)="toggleDropdown('servicesMaintenance')"
+        >
+          <span>Services & Maintenance</span>
+          <fa-icon
+            [icon]="angleDown"
+            [class.rotated]="dropdowns['servicesMaintenance']"
+            class="accordion-icon"
+          ></fa-icon>
+        </button>
+        <div
+          class="accordion-content"
+          *ngIf="dropdowns['servicesMaintenance']"
+          [ngClass]="{ active: dropdowns['servicesMaintenance'] }"
+        >
+          <ul class="mobile-dropdown-list">
+            <li class="mobile-dropdown-item">
+              <a
+                routerLink="water-overflow-controller"
+                class="mobile-dropdown-link"
+                >Water Overflow Control Solutions</a
+              >
+            </li>
+            <!-- <li class="mobile-dropdown-item">
+                                    <a class="mobile-dropdown-link">Electromechanical Product Design &
+                                        Development</a>
+                                </li> -->
+            <li class="mobile-dropdown-item">
+              <a
+                routerLink="pcb-design-development"
+                class="mobile-dropdown-link"
+                >PCB Design, Development & Fabrication</a
+              >
+            </li>
+            <li class="mobile-dropdown-item">
+              <a
+                routerLink="3d-design-printing-service"
+                class="mobile-dropdown-link"
+                >3D Prototype Product Design & Printing</a
+              >
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="mobile-nav-item">
+        <a routerLink="career" class="mobile-nav-link">
+          <span>Career</span>
+        </a>
+      </li>
+
+      <!-- Trainings Accordion -->
+      <!-- <li class="mobile-nav-item accordion">
+                <button class="mobile-nav-link" (click)="toggleDropdown('trainings')">
+                    <span>Trainings & Workshops</span>
+                    <fa-icon [icon]="angleDown" [class.rotated]="dropdowns['trainings']"
+                        class="accordion-icon"></fa-icon>
+                </button>
+                <div class="accordion-content" *ngIf="dropdowns['trainings']"
+                    [ngClass]="{ 'active': dropdowns['trainings'] }">
+                    <ul class="mobile-dropdown-list">
+                        <li class="mobile-dropdown-item">
+                            <a routerLink="ev-workshop" class="mobile-dropdown-link">EV & Battery Technology</a>
+                        </li>
+                        <li class="mobile-dropdown-item">
+                            <a routerLink="iiot-workshop" class="mobile-dropdown-link">IIoT with Embedded System</a>
+                        </li>
+                        <li class="mobile-dropdown-item">
+                            <a routerLink="solar-pv-plant-workshop" class="mobile-dropdown-link">Solar PV Plant
+                                Installation & Application</a>
+                        </li>
+                        <li class="mobile-dropdown-item">
+                            <a routerLink="3d-workshop" class="mobile-dropdown-link">3D Designing & Printing</a>
+                        </li>
+                    </ul>
+                </div>
+            </li> -->
+
+      <!-- Simple Links -->
+      <!-- <li class="mobile-nav-item">
+                <a routerLink="career" class="mobile-nav-link">
+                    <span>Career</span>
+                </a>
+            </li> -->
+      <!-- <li class="mobile-nav-item">
+                <button class="mobile-signup-btn" (click)="openSignUpPopup()">Sign Up</button>
+            </li> -->
+    </ul>
+  </nav>
+
+  <!-- Sign Up Modal -->
+  <div
+    class="modal-overlay"
+    *ngIf="isSignUpVisible"
+    (click)="closeSignUpPopup()"
+  ></div>
+  <div class="signup-modal" *ngIf="isSignUpVisible" [@modalAnimation]>
+    <button class="modal-close-btn" (click)="closeSignUpPopup()">
+      <mat-icon>close</mat-icon>
+    </button>
+    <app-sign-up></app-sign-up>
+  </div>
+</header>

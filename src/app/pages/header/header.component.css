@@ -1,0 +1,500 @@
+/* Header Container */
+.header-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+  font-family: "Open Sans", sans-serif;
+  z-index: 1000;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 90px;
+}
+button.dropdown-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 15px;
+  font: inherit;
+  color: #373737;
+  font-weight: 600;
+  font-size: 15px;
+  background: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: left;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Logo Styles */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+.partner-logo {
+  height: 120px;
+  width: auto;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+.nav-item a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 8px;
+  color: #373737;
+  font-weight: 700;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.nav-link:hover {
+  color: #2c547f;
+  background-color: rgba(44, 84, 127, 0.05);
+}
+
+.nav-link fa-icon {
+  font-size: 14px;
+}
+
+.dropdown-icon {
+  font-size: 15px;
+  margin-left: 1px;
+  transition: transform 0.3s ease;
+}
+.angle-right-icon {
+  font-size: 15px;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+/* Dropdown Menus */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  min-width: 180px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.nav-list > .nav-item:nth-last-child(-n + 2) > .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.dropdown-menu.wide-menu {
+  width: max-content;
+  min-width: 310px;
+}
+
+.nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-list {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.dropdown-item {
+  position: relative;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 10px 15px;
+  color: #373737;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  border: none;
+  background-color: white;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.dropdown-link:hover {
+  color: #2c547f;
+  background-color: rgba(44, 84, 127, 0.05);
+}
+
+/* Nested Dropdown */
+.nested-dropdown-menu {
+  position: absolute;
+  right: calc(100% + 4px);
+  left: auto;
+  top: 0;
+  width: max-content;
+  min-width: 320px;
+  max-width: 340px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  z-index: 200;
+}
+
+.nested-dropdown:hover .nested-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Overflow fix — jab dropdown viewport ke bahar overflow hota hai
+   tab JS is class ko add karta hai taaki dropdown right-align ho jaaye */
+.dropdown-menu.align-right {
+  left: auto;
+  right: 0;
+}
+
+/* Parent dropdown jab right-aligned ho, tab nested dropdown
+   left side khulega taaki wo bhi screen ke andar hi rahe */
+.dropdown-menu.align-right .nested-dropdown-menu {
+  right: auto;
+  left: calc(-100% - 4px);
+  transform: translateX(-10px);
+}
+
+.dropdown-menu.align-right .nested-dropdown:hover .nested-dropdown-menu {
+  transform: translateX(0);
+}
+
+/* Sign Up Button */
+.signup-btn {
+  background-color: #2c547f;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #284e6d;
+  transform: translateY(-1px);
+}
+.desktop-signup {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+  border: 1px solid #dddddd;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.desktop-signup:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.3);
+}
+
+.desktop-signup svg {
+  width: 90%;
+  height: 90%;
+  fill: #121212;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #373737;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 90px);
+  background-color: #ffffff;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.mobile-nav.active {
+  transform: translateX(0);
+}
+
+.mobile-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+}
+
+.mobile-nav-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 0;
+  color: #373737;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: none;
+}
+.mobile-nav-link span {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+}
+.mobile-nav-link fa-icon {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.accordion-icon {
+  font-size: 13px;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.accordion-content.active {
+  max-height: 500px;
+}
+
+.mobile-dropdown-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.mobile-dropdown-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.mobile-dropdown-link {
+  display: block;
+  padding: 12px 0;
+  color: #333;
+  font-size: 15px;
+  text-decoration: none;
+  border: none;
+  background-color: white;
+}
+
+.nested-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding-left: 15px;
+}
+.nested-accordion-content.active {
+  max-height: 500px;
+}
+.mobile-signup-btn {
+  width: 100%;
+  margin-top: 15px;
+  background-color: #2c547f;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobile-signup-btn:hover {
+  background-color: #284e6d;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1100;
+}
+
+.signup-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1200;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1025px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+}
+
+/* Show desktop-nav and hide mobile-nav above 1025px */
+@media (min-width: 1025px) {
+  .desktop-nav {
+    display: flex;
+  }
+
+  .mobile-menu-toggle,
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 769px) {
+  .header-content {
+    padding: 0 15px;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .partner-logo {
+    height: 90px;
+  }
+
+  .signup-modal {
+    width: 95%;
+    max-height: 85vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    padding: 0 10px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .partner-logo {
+    height: 80px;
+  }
+}

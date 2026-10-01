@@ -1,0 +1,9 @@
+<div class="workshop-gallery">
+    <h3 class="gallery-title">Hands-On Project</h3>
+    <div class="gallery-grid">
+        <div class="gallery-item" *ngFor="let img of galleryData">
+            <img [src]="img.src" [alt]="img.title" class="gallery-img" />
+            <p class="image-title">{{ img.title }}</p>
+        </div>
+    </div>
+</div>

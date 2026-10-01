@@ -1,0 +1,251 @@
+.container {
+  padding: 20px 10px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.top-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container h2 {
+  font-size: 22px;
+  color: #1a2a36;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* ===== PRODUCT GRID ===== */
+.product-list-section {
+  display: grid;
+  /* fixed 4 columns by default (laptop/large screens) */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  /* stretch, NOT center — this is what keeps every card the same size */
+  align-items: stretch;
+  justify-items: stretch;
+  padding: 10px 0 30px;
+}
+
+/* Every card takes full height/width of its grid cell */
+.product-list-section > * {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.container h3 {
+  font-size: 16px;
+  color: #373737;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.cat-name-div {
+  padding-left: 35px;
+  display: flex;
+  justify-content: left;
+  align-content: center;
+}
+
+.cat-name-div mat-icon {
+  margin-top: 10px;
+}
+
+.back-btn {
+  background-color: #f5f6fa;
+  color: #373737 !important;
+  box-shadow: none;
+}
+
+/* Category filter pills */
+.category-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 35px 20px;
+}
+
+.pill {
+  border: none;
+  background: #eef0f6;
+  color: #374151;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  font-family: "Open Sans", sans-serif;
+}
+
+.pill.active {
+  background: #3d4494;
+  color: #fff;
+}
+
+/* Search Box */
+.search-box {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 25px;
+}
+.input-search {
+  height: 20px;
+  width: 300px;
+  border-style: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+  background-color: #3d4494;
+  padding-right: 40px;
+  color: #fff;
+}
+.input-search::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.btn-search {
+  width: 50px;
+  height: 45px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color: #ffffff;
+  background-color: transparent;
+  pointer-events: painted;
+  margin-top: 0px;
+}
+.btn-search:focus ~ .input-search {
+  width: 300px;
+  border-radius: 15px;
+  background-color: #3d4494;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.input-search:focus {
+  width: 300px;
+  border-radius: 15px;
+  background-color: #3d4494;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+
+.not-found-text {
+  font-size: 22px;
+  color: #373737;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* ===== RESPONSIVE GRID (Media Queries) ===== */
+
+/* Large desktop screens — same 4-column layout as laptop, just contained with side padding */
+@media (min-width: 1440px) {
+  .container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .product-list-section {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Extra-large / ultra-wide screens — keep the same laptop look, just more breathing room on the sides */
+@media (min-width: 1920px) {
+  .container {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+/* Standard laptop screens */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .product-list-section {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Small laptop / large tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-list-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 768px) {
+  .product-list-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .product-list-section {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+
+  .input-search {
+    height: 20px;
+    width: 0px;
+    border-style: none;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all 0.5s ease-in-out;
+    background-color: #3d4494;
+    padding-right: 40px;
+    color: #fff;
+  }
+  .btn-search:focus ~ .input-search {
+    width: 160px;
+    border-radius: 15px;
+    background-color: #3d4494;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+  }
+  .input-search:focus {
+    width: 160px;
+    border-radius: 15px;
+    background-color: #3d4494;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+  }
+  .cat-name-div h3 {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .category-pills {
+    padding: 10px 15px 20px;
+    justify-content: center;
+  }
+}

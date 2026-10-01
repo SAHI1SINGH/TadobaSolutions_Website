@@ -1,0 +1,1121 @@
+/* =============================================
+   HERO BANNER — Digital Agri Villages
+   ============================================= */
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  overflow: hidden;
+  /* border-radius: 14px; */
+  margin-bottom: 0;
+}
+
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;  /* was: center */
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.45) 50%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  z-index: 1;
+}
+
+/* ✅ FIXED: added display:flex + position:relative */
+.hero-banner-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 560px;
+  padding: 40px 52px;
+}
+
+/* --- Left side --- */
+.hero-left {
+  max-width: 600px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-eyebrow {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 0 4px;
+  letter-spacing: 0.02em;
+  font-family: "Inter Tight", "Segoe UI", sans-serif;
+}
+
+.hero-title {
+  font-size: 3.4rem;
+  font-weight: 800;
+  color: #4caf50;
+  margin: 0 0 10px;
+  line-height: 1.1;
+  font-family: "Inter Tight", "Segoe UI", sans-serif;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 24px;
+  line-height: 1.5;
+  white-space: nowrap;           /* ✅ single line */
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* --- Feature icons row --- */
+.hero-features {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;             /* ✅ all in one line */
+  margin-bottom: 28px;           /* ✅ gap before buttons */
+}
+
+.hero-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  text-align: center;
+}
+
+.hero-feature:first-child {
+  padding-left: 0;
+}
+
+.hf-icon {
+  width: 52px;          /* was 42px */
+  height: 52px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(76, 175, 80, 0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #81c784;
+}
+
+.hf-icon svg {
+  width: 26px;          /* was 20px */
+  height: 26px;
+}
+
+.hero-feature span {
+  font-family: poppins, "Segoe UI", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.hf-divider {
+  width: 1px;
+  height: 54px;         /* was 44px */
+  background: rgba(255, 255, 255, 0.25);
+  align-self: center;
+  flex-shrink: 0;
+}
+
+/* --- CTA buttons --- */
+.hero-cta-row {
+  display: flex;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.cta-primary {
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 13px 28px;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Inter Tight", "Segoe UI", sans-serif;
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+}
+
+.cta-primary:hover {
+  background: #1b5e20;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
+}
+
+.cta-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  padding: 11px 24px;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Inter Tight", "Segoe UI", sans-serif;
+  transition: background 0.25s, border-color 0.25s, transform 0.2s;
+}
+
+.cta-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* --- Right: Hindi card --- */
+.hero-right {
+  align-self: flex-end;
+  padding-bottom: 8px;
+}
+
+.hindi-card {
+  background: rgba(0, 0, 0, 0.55);
+  border: 1.5px solid rgba(76, 175, 80, 0.5);
+  border-radius: 12px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 300px;
+  backdrop-filter: blur(6px);
+}
+
+.hindi-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  margin-top: 2px;
+}
+
+.hindi-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hindi-text {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.65;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* --- Stats bar --- */
+.stats-bar {
+  background: #fff;
+  /* border-radius: 0 0 14px 14px; */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 24px 40px;
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.stat-icon {
+  width: 44px;
+  height: 44px;
+  background: #e8f5e9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.stat-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1;
+  font-family: "Inter Tight", "Segoe UI", sans-serif;
+}
+
+.stat-label {
+  font-family: poppins, "Segoe UI", sans-serif;
+  font-size: 0.82rem;
+  color: #666;
+  margin-top: 3px;
+  font-weight: 500;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 50px;
+  background: #e0e0e0;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+
+@media (max-width: 1024px) {
+  .hero-title { font-size: 2.8rem; }
+  .hero-banner-content { padding: 44px 36px; }
+  .hero-subtitle { white-space: normal; }
+}
+
+@media (max-width: 769px) {
+  .hero-banner { border-radius: 10px; min-height: auto; }
+  .hero-banner-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 36px 24px;
+    min-height: auto;
+  }
+  .hero-title { font-size: 2.2rem; }
+  .hero-subtitle { white-space: normal; }
+  .hero-right { align-self: flex-start; }
+  .hindi-card { max-width: 100%; }
+  .stats-bar { flex-wrap: wrap; gap: 20px; padding: 20px 24px; justify-content: flex-start; }
+  .stat-divider { display: none; }
+  .stat-item { flex: 1 1 40%; }
+}
+
+@media (max-width: 426px) {
+  .hero-title { font-size: 1.9rem; }
+  .hero-eyebrow { font-size: 1rem; }
+  .hero-features { overflow-x: auto; }
+  .hero-feature { padding: 0 8px; }
+  .hero-feature span { font-size: 0.58rem; }
+  .hf-icon { width: 34px; height: 34px; }
+  .hf-icon svg { width: 15px; height: 15px; }
+  .cta-primary, .cta-outline { width: 100%; text-align: center; }
+  .hero-cta-row { flex-direction: column; }
+  .stat-item { flex: 1 1 100%; }
+  .stats-bar { border-radius: 0 0 10px 10px; }
+}
+
+/* =============================================
+   AGRI PRODUCTS SECTION
+   Append to digit-agri-villages.component.css
+   ============================================= */
+
+.agri-products-section {
+  padding: 10px 20px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Header --- */
+.aps-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.aps-label {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2e7d32;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  font-family: "Inter Tight", "Segoe UI", sans-serif;
+}
+
+.aps-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 18px;
+  font-family: "Inter Tight", "Segoe UI", sans-serif;
+}
+
+.aps-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.aps-divider1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aps-line {
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #2e7d32;
+  border-radius: 2px;
+}
+
+.aps-leaf {
+  width: 22px;
+  height: 22px;
+}
+
+/* --- Grid --- */
+/* --- Grid --- */
+.agri-products-section {
+  padding: 20px 40px 20px;   /* was 80px bottom */
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.aps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  margin-bottom: 5px;
+}
+
+.aps-card {
+  grid-column: span 1;   /* remove all the span 3 / offset rules */
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e8e8e8;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 7 cards: first row 4, second row 3 centered */
+.aps-card:nth-child(n+5) {
+  /* second row starts at card 5 */
+}
+
+
+.aps-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(46, 125, 50, 0.14);
+}
+
+
+/* --- Card Image --- */
+.aps-img-wrap {
+  width: 100%;
+  height: 180px;   /* was 200px */
+  overflow: hidden;
+}
+
+.aps-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.aps-card-body,
+.aps-card-title,
+.aps-points {
+  text-align: center;
+}
+
+.aps-points {
+  list-style-position: outside;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.aps-card:hover .aps-img-wrap img {
+  transform: scale(1.04);
+}
+
+/* --- Card Body --- */
+.aps-card-body {
+  text-align: left;
+  padding: 20px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+}
+
+.aps-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 8px;
+  font-family: "Inter Tight", "Segoe UI", sans-serif;
+  line-height: 1.35;
+}
+
+.aps-card-desc {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.55;
+  margin: 0 0 18px;
+  flex: 1;
+  font-family: "Segoe UI", sans-serif;
+}
+.aps-points {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.aps-points li {
+  font-size: 0.88rem;
+  color: #444;
+  padding: 5px 0;
+  padding-left: 22px;
+  position: relative;
+  line-height: 1.4;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.aps-points li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+.aps-card-btn {
+  background: transparent;
+  color: #2e7d32;
+  border: 1.5px solid #2e7d32;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Inter Tight", "Segoe UI", sans-serif;
+  transition: background 0.2s, color 0.2s;
+  align-self: center;
+  min-width: 130px;
+}
+
+.aps-card-btn:hover {
+  background: #2e7d32;
+  color: #fff;
+}
+
+/* --- Footer CTA --- */
+.aps-footer {
+  text-align: center;
+}
+
+.aps-view-all {
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Inter Tight", "Segoe UI", sans-serif;
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+  letter-spacing: 0.02em;
+}
+
+.aps-view-all:hover {
+  background: #1b5e20;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.35);
+}
+
+/* =============================================
+   RESPONSIVE — Products Section
+   ============================================= */
+
+@media (max-width: 1200px) {
+  .aps-grid { grid-template-columns: repeat(3, 1fr); }
+  .aps-card { grid-column: span 1 !important; }
+}
+
+@media (max-width: 700px) {
+  .aps-grid { grid-template-columns: repeat(2, 1fr); }
+  .aps-img-wrap { height: 150px; }
+}
+
+@media (max-width: 400px) {
+  .aps-grid { grid-template-columns: 1fr; }
+}
+
+
+/* =============================================
+   SMART SOLUTIONS SECTION
+   Append to digit-agri-villages.component.css
+   ============================================= */
+
+.ss-section {
+  display: flex;
+  align-items: center;
+  background: #eef4ee;
+  border-radius: 16px;
+  padding: 32px 56px 52px; 
+  margin: 0 0 20px;
+  gap: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- Left --- */
+.ss-left {
+  flex: 0 0 320px;
+  min-width: 280px;
+  padding-right: 32px;
+}
+
+.ss-label {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2e7d32;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  font-family: "Inter Tight", "Segoe UI", sans-serif;
+}
+
+.ss-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0 0 16px;
+  font-family: poppins, "Segoe UI", sans-serif;
+}
+.ss-desc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin: 0 0 28px;
+  font-family: poppins, "Segoe UI", sans-serif;
+}
+
+.ss-cta {
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 7px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Inter Tight", "Segoe UI", sans-serif;
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ss-cta:hover {
+  background: #1b5e20;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(46, 125, 50, 0.35);
+}
+
+/* --- Vertical divider --- */
+.ss-vdivider {
+  width: 1px;
+  align-self: stretch;
+  background: #b5cfb6;
+  margin: 0 40px;
+  flex-shrink: 0;
+}
+
+/* --- Right --- */
+.ss-right {
+  flex: 1;
+}
+
+.ss-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 36px;
+  column-gap: 8px;
+}
+
+/* --- Item --- */
+.ss-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.ss-icon {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+}
+
+.ss-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ss-text h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: green;
+  margin: 0 0 5px;
+  line-height: 1.3;
+  font-family: poppins,"Segoe UI", sans-serif;
+}
+
+/* 5. Bigger item desc */
+.ss-text p {
+  font-size: 0.88rem;
+  color: black;
+  margin: 0;
+  line-height: 1.5;
+  font-family: poppins, "Segoe UI", sans-serif;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+
+@media (max-width: 1200px) {
+  .ss-grid { grid-template-columns: repeat(2, 1fr); row-gap: 28px; }
+}
+
+@media (max-width: 1024px) {
+  .ss-section {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 32px;
+  }
+  .ss-left { flex: none; padding-right: 0; padding-bottom: 28px; }
+  .ss-vdivider { width: 100%; height: 1px; margin: 0 0 28px; align-self: auto; }
+  .ss-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .ss-section { padding: 28px 18px; border-radius: 10px; }
+  .ss-title { font-size: 1.5rem; }
+  .ss-grid { grid-template-columns: 1fr; row-gap: 22px; }
+  .ss-icon { width: 44px; height: 44px; }
+}
+
+/* =============================================
+   OUR PROJECTS SECTION
+   ============================================= */
+
+.projects-section {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px 40px 20px;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.projects-label {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2e7d32;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  font-family: "Inter Tight", "Segoe UI", sans-serif;
+}
+
+.projects-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 18px;
+  font-family: "Inter Tight", "Segoe UI", sans-serif;
+}
+
+.projects-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.projects-line {
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #2e7d32;
+  border-radius: 2px;
+}
+
+.projects-leaf {
+  width: 22px;
+  height: 22px;
+}
+
+/* --- Image Grid --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.project-img-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;          /* matches typical landscape photo ratio */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.project-img-wrap:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(46, 125, 50, 0.18);
+}
+
+
+.project-img-wrap:hover img {
+  transform: scale(1.04);
+}
+
+.project-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        
+  object-position: center;
+  background: #f5f5f5;        
+}
+
+.project-img-wrap:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(46, 125, 50, 0.18);
+}
+
+/* .project-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+} */
+
+.project-img-wrap:hover img {
+  transform: scale(1.04);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .projects-section { padding: 20px 18px 60px; }
+  .projects-grid { grid-template-columns: 1fr; gap: 14px; }
+  .projects-title { font-size: 1.7rem; }
+}
+
+
+.our-partner-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f6fa;
+  padding: 10px 0 15px 0;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.our-partner-heading {
+font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 18px;
+  font-family: "Inter Tight", "Segoe UI", sans-serif;
+}
+
+.our-partner-heading h6 {
+ font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 18px;
+  font-family: "Inter Tight", "Segoe UI", sans-serif;
+}
+
+/* Marquee wrapper — clips the scrolling track */
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fade edges */
+.marquee-wrapper::before,
+.marquee-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #f5f6fa, transparent);
+}
+.marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #f5f6fa, transparent);
+}
+
+/* The scrolling track — contains 2× the items for seamless loop */
+.marquee-track {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+  width: max-content;
+  animation: marquee-scroll 35s linear infinite;
+}
+
+/* .marquee-track:hover {
+  animation-play-state: paused;
+} */
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Individual card */
+.partner-logo-and-name-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+.partner-logo {
+  width: 160px;
+  height: 120px;
+  background-color: #ffffff;
+  border: 1px solid rgb(218, 213, 213);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partner-logo:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.partner-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.pt-ravi img  { width: 90px; }
+.forte img    { width: 100px; }
+.igkv img     { width: 140px; }
+.ibitf img    { width: 110px; }
+.abhiyantri img { width: 95px; }
+.mguevv img   { width: 110px; }
+.invariance img { width: 150px; }
+.bit-raipur img { width: 110px; }
+
+.partner-name {
+  font-family: "Roboto", serif;
+  font-size: 13px;
+  margin-top: 8px;
+  letter-spacing: 1px;
+  color: #1a2a36;
+  width: 160px;
+}
+
+.partner-name span {
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.vasu-Logistics {
+  background-color: #373737;
+}
+
+/* ================================================== Awards Section ======================================= */
+.awards-container {
+  padding: 10px 0;
+}
+.awards-container h6 {
+  font-size: 30px;
+  color: #1a2a36;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-family: "Roboto", serif;
+  letter-spacing: 1.5px;
+}
+
+/* ===============================================Project Section ================================================*/
+.project-container {
+  background-color: #fff;
+  padding: 0px 20px 20px;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-container h6 {
+  font-size: 30px;
+  color: #1a2a36;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-family: "Roboto", serif;
+  letter-spacing: 1.5px;
+}
+
+.project-sub-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+
+/* ================= Awards & Achievements Section ================= */
+/* Namespaced with `aa-` prefix — no overlap with .our-partner-* / .marquee-* / .partner-* classes */
+
+.aa-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f6fa;
+  padding: 10px 0 15px 0;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.aa-heading h6 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 18px;
+  font-family: "Inter Tight", "Segoe UI", sans-serif;
+}
+
+/* Wrapper — clips scrolling track, adds fade edges */
+.aa-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.aa-wrapper::before,
+.aa-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.aa-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #f5f6fa, transparent);
+}
+.aa-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #f5f6fa, transparent);
+}
+
+/* Scrolling track */
+.aa-track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  width: max-content;
+  animation: aa-scroll 30s linear infinite;
+}
+
+@keyframes aa-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Card + box — fixed size, image always fits cleanly regardless of aspect ratio */
+.aa-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.aa-box {
+  width: 210px;
+  height: 170px;
+  background-color: #ffffff;
+  border: 1px solid rgb(218, 213, 213);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;    
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: box-shadow 0.2s ease;
+}
+
+.aa-box:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.aa-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* fills box completely, crops overflow instead of shrinking */
+  display: block;
+  border-radius: 15px;     /* match box's rounded corners */
+}

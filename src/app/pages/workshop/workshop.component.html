@@ -1,0 +1,30 @@
+<div class="workshop-container">
+    <div class="banner-container" [ngStyle]="{ 'background-image': 'url(assets/images/banner-1.png)', 'background-size': 'cover',
+    'background-repeat': 'no-repeat',
+    'background-position': 'center' }">
+        <h5>Workshops/ Internship/ Vocational Training</h5>
+    </div>
+    <div class="text-container">
+        <h4>Gain the Knowledge with Tadoba and Experience the ease of Learning...</h4>
+    </div>
+    <div class="card-container">
+        <div class="card" *ngFor="let workshop of workshops"
+            [ngStyle]="{ 'background-color': workshop.backgroundColor, 'border-color': workshop.backgroundColor }">
+            <div class="title-div">
+                <h5>{{ workshop.title }}</h5>
+            </div>
+            <div class="description">
+                <p>{{ workshop.description }}</p>
+                <button class="learn-more-btn" [ngStyle]="{
+                'background-color': 'white',
+                color: workshop.backgroundColor
+              }" [routerLink]="workshop.link">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="workshop-wrapper">
+        <app-workshop-registration></app-workshop-registration>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="left-side-container">
+        <img src="./assets/images/sign-up/office-work-28 - Copy.svg" alt="">
+    </div>
+    <div class="right-side-container">
+        <div class="row heading"><p>Create Your Account</p></div>
+        <div class="row form-section">
+            <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+                <div class="form-group">
+                    <fa-icon [icon]="user"></fa-icon>
+                    <input type="text" name="fullName" id="fullName" [(ngModel)]="newUser.fullName"  placeholder="Enter Your Full Name">
+                </div>
+                <div class="form-group">
+                    <fa-icon [icon]="contact"></fa-icon>
+                    <input type="text" name="mobileNumber" id="mobileNumber" [(ngModel)]="newUser.mobileNumber" placeholder="Enter Your Mobile Number">
+                </div>
+                <div class="form-group">
+                    <fa-icon [icon]="email"></fa-icon>
+                    <input type="text" name="email" id="email" [(ngModel)]="newUser.email" placeholder="Enter Your Email">
+                </div>
+                <div class="form-group">
+                    <fa-icon [icon]="password"></fa-icon>
+                    <input type="text" name="password" id="password" [(ngModel)]="newUser.password" placeholder="Enter Your Password">
+                </div>
+                <div class="form-group">
+                    <fa-icon [icon]="address"></fa-icon>
+                    <input type="text" name="address" id="address" [(ngModel)]="newUser.address" placeholder="Enter Your Address">
+                </div>
+                <button type="submit" mat-button>Create Your Account</button>
+            </form>
+        </div>
+        <div class="row forget-passowrd-already-have-account">
+            <div class="forget-password">Forgot Password</div>
+            <div class="aleady-have-account">Already have account? click here</div>
+        </div>
+    </div>
+</div>

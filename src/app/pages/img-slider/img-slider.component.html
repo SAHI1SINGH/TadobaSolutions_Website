@@ -1,0 +1,14 @@
+<div class="container swiper">
+    <div class="slider-wrapper">
+        <div class="card-list swiper-wrapper">
+            @for (slide of data; track $index) {
+                <div class="card-item swiper-slide">
+                    <img [src]="slide.imgUrl" alt="" class="card-img">
+                </div>
+            }
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+        <div class="swiper-slide-button swiper-button-prev"></div>
+        <div class="swiper-slide-button swiper-button-next"></div>
+    </div>
+</div>

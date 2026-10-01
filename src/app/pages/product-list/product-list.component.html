@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="top-div">
+    <button mat-raised-button class="back-btn" (click)="navigateBack()">
+      <mat-icon>arrow_back</mat-icon>Back
+    </button>
+    <div class="search-box">
+      <button class="btn-search"><mat-icon>search</mat-icon></button>
+      <input
+        type="text"
+        class="input-search"
+        placeholder="Search Products"
+        [(ngModel)]="searchTerm"
+        (input)="onSearch()"
+      />
+    </div>
+  </div>
+
+  <div class="cat-name-div">
+    <h3>Our Products</h3>
+  </div>
+
+  <div class="category-pills">
+    @for (cat of categories; track cat) {
+      <button
+        class="pill"
+        [class.active]="activeCategory === cat"
+        (click)="selectCategory(cat)"
+      >
+        {{ cat === 'All' ? 'All Products' : cat }}
+      </button>
+    }
+  </div>
+
+  <div class="product-list-section">
+    @for (data of products; track data.productId) {
+      <app-product-card
+        [productId]="data.productId"
+        [productImg]="data.productImgUrl[0] || ''"
+        [productName]="data.productName"
+        [productRating]="+data.productRating"
+        [productDescription]="data.productDescription"
+        [productBadge]="data.productBadge"
+        [productFeatures]="data.productFeatures"
+        (contactClick)="onContact()"
+      ></app-product-card>
+    }
+  </div>
+
+  @if (products.length === 0) {
+    <p class="not-found-text">"No items found"</p>
+  }
+</div>

@@ -1,0 +1,46 @@
+<div class="product-card">
+  <div class="card-top">
+    @if (badgeStyle) {
+      <div class="badge" [style.background]="badgeStyle.bg" [style.color]="badgeStyle.color">
+        <mat-icon>{{ badgeStyle.icon }}</mat-icon>{{ badgeStyle.label }}
+      </div>
+    } @else {
+      <span></span>
+    }
+    <button class="heart-btn" (click)="toggleWishlist($event)">
+      <mat-icon>{{ isWishlisted ? 'favorite' : 'favorite_border' }}</mat-icon>
+    </button>
+  </div>
+
+  <div class="img-wrap">
+    <img [src]="productImg" [alt]="productName" />
+  </div>
+
+  <h3 class="product-name">{{ productName }}</h3>
+  <p class="product-blurb">{{ blurb }}</p>
+
+  <div class="feature-row">
+    @for (f of features; track f.label) {
+      <div class="feature-chip">
+        <mat-icon>{{ f.icon }}</mat-icon>
+        <span>{{ f.label }}</span>
+      </div>
+    }
+  </div>
+
+  <div class="rating-row">
+    @for (s of fullStars; track $index) { <mat-icon class="star full">star</mat-icon> }
+    @if (hasHalfStar) { <mat-icon class="star full">star_half</mat-icon> }
+    @for (s of emptyStars; track $index) { <mat-icon class="star empty">star_border</mat-icon> }
+    <span class="rating-value">{{ productRating }}</span>
+  </div>
+
+  <div class="action-row">
+    <button mat-stroked-button class="view-btn" [routerLink]="['/product', productId]">
+      <mat-icon>visibility</mat-icon> View Details
+    </button>
+    <button mat-flat-button class="contact-btn" (click)="openWhatsApp(productId)">
+      <fa-icon [icon]="whatsapp"></fa-icon> Contact Us
+    </button>
+  </div>
+</div>

@@ -1,0 +1,144 @@
+/* Workshop Container */
+.workshop-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Heading */
+.workshop-container .workshop-heading {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Workshop List */
+.workshop-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Workshop Card */
+.workshop-card {
+  display: flex;
+  flex-direction: column;
+  background: #fbfbfb;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  justify-content: center;
+  align-items: center;
+}
+
+.workshop-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image Wrapper */
+.image-wrapper {
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.module-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Module Content */
+.module-content {
+  padding: 20px;
+}
+
+.module-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  border-left: 5px solid #007bff;
+  padding-left: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Bullet Points */
+.bullet-list {
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.bullet-list li {
+  font-size: 15px;
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.bullet-list li::before {
+  content: "✔";
+  color: #007bff;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+/* Responsive Design */
+@media (min-width: 768px) {
+  .workshop-card {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .image-wrapper {
+    width: 35%;
+  }
+
+  .module-content {
+    flex: 1;
+    padding: 20px;
+  }
+  .workshop-heading {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  .register-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 426px) {
+  .register-text p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #555;
+    text-align: center;
+  }
+  .workshop-container .workshop-heading {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  .bullet-list li {
+    font-size: 13px;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px;
+    font-family: "Open Sans", sans-serif;
+  }
+}

@@ -1,0 +1,359 @@
+/* =========================
+   SOLAR GUIDE SECTION
+========================= */
+
+.solar-guide-section{
+  padding: 5px clamp(20px, 6vw, 140px);
+
+  background: #f5f7fb;
+
+  overflow: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.solar-guide-header{
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto 22px;
+}
+
+/* BADGE */
+
+.guide-badge{
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  border-radius: 40px;
+
+  background: #e9eefc;
+
+  color: #3467ff;
+
+  font-size: 20px;                     /* was 13px */
+  font-weight: 700;
+
+  margin-bottom: 14px;
+}
+
+
+.solar-guide-header h2{
+  font-size: 40px;                      /* section heading — target size */
+
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  color: #111827;
+
+  margin-bottom: 8px;
+}
+
+/* DESCRIPTION */
+
+.solar-guide-header p{
+  font-size: 20px;                      /* was 18px */
+
+  line-height: 1.5;
+
+  color: #64748b;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.solar-guide-grid{
+  display: flex;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 18px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.solar-guide-card{
+  width: 250px;
+
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 18px 16px;
+
+  text-align: center;
+
+  box-shadow:
+  0 8px 25px rgba(0,0,0,0.06);
+
+  transition: 0.3s;
+}
+
+.solar-guide-card:hover{
+  transform: translateY(-6px);
+}
+
+/* =========================
+   ICON
+========================= */
+
+.guide-icon{
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 10px;
+
+  font-size: 28px;
+
+  background: white;
+}
+
+/* ICON COLORS */
+
+.green-icon{
+  border: 3px solid #22c55e;
+
+  color: #22c55e;
+}
+
+.blue-icon{
+  border: 3px solid #3467ff;
+
+  color: #3467ff;
+}
+
+.orange-icon{
+  border: 3px solid #fb923c;
+
+  color: #fb923c;
+}
+
+/* =========================
+   USAGE BADGE
+========================= */
+
+.usage-badge{
+  display: inline-block;
+
+  padding: 6px 14px;
+
+  border-radius: 30px;
+
+  color: white;
+
+  font-size: 20px;                       /* was 12px */
+  font-weight: 700;
+
+  margin-bottom: 12px;
+}
+
+.green-badge{
+  background: #22c55e;
+}
+
+.blue-badge{
+  background: #3467ff;
+}
+
+.orange-badge{
+  background: #fb923c;
+}
+
+/* =========================
+   SMALL TEXT
+========================= */
+
+.guide-small-text{
+  display: block;
+
+  font-size: 20px;                        /* was 14px */
+
+  line-height: 1.4;
+
+  color: #222;
+
+  margin-bottom: 4px;
+}
+
+/* =========================
+   MAIN VALUE
+========================= */
+
+.solar-guide-card h3{
+  font-size: 40px;
+
+  font-weight: 600;
+
+  margin-bottom: 1px;
+}
+
+/* UNIT */
+
+.unit-text{
+  font-size: 20px;                         /* was 22px */
+
+  font-weight: 700;
+
+  color: #111;
+
+  margin-bottom: 6px;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.guide-divider{
+  width: 100%;
+  height: 2px;
+  margin-bottom: 6px;
+}
+
+.green-divider{
+  background:
+  rgba(34,197,94,0.3);
+}
+
+.blue-divider{
+  background:
+  rgba(52,103,255,0.3);
+}
+
+.orange-divider{
+  background:
+  rgba(251,146,60,0.3);
+}
+
+/* =========================
+   CAPACITY TEXT
+========================= */
+
+.capacity-label{
+  display: block;
+  font-size: 20px;                          /* was 18px */
+  color: #111;
+  margin-bottom: 6px;
+}
+
+/* FINAL VALUE */
+
+.solar-guide-card h4{
+  font-size: 40px;                          /* fixed typo "40 px" */
+  font-weight: 600;
+}
+
+/* COLORS */
+
+.green-text{
+  color: #22c55e;
+}
+
+.blue-text{
+  color: #3467ff;
+}
+
+.orange-text{
+  color: #fb923c;
+}
+
+/* =========================
+   NOTE
+========================= */
+
+.solar-guide-note{
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 12px 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  box-shadow:
+  0 5px 18px rgba(0,0,0,0.05);
+}
+
+.solar-guide-note i{
+  color: #3467ff;
+
+  font-size: 20px;                            /* was 18px */
+}
+
+.solar-guide-note p{
+  font-size: 20px;                            /* was 16px */
+
+  font-weight: 600;
+
+  color: #3467ff;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 768px){
+
+  .solar-guide-section{
+    padding:
+    0px
+    20px;
+  }
+
+  .solar-guide-header{
+    margin-bottom: 18px;
+  }
+
+  .solar-guide-header h2{
+    font-size: 32px;                           /* scaled down proportionally from 40px */
+  }
+
+  .solar-guide-header p{
+    font-size: 16px;                           /* scaled down proportionally from 20px */
+  }
+
+  .solar-guide-grid{
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .solar-guide-card{
+    width: 100%;
+    max-width: 280px;
+    padding: 14px 14px;
+  }
+
+  .solar-guide-card h3{
+    font-size: 26px;
+  }
+
+  .solar-guide-card h4{
+    font-size: 22px;
+  }
+
+}

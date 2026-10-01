@@ -1,0 +1,161 @@
+<div class="container">
+    <h1>Join Our Team!</h1>
+    <p>We are always on the lookout for passionate and talented individuals to join our growing family. <br>
+        If you're looking for a challenging and rewarding career, we'd love to hear from you!
+    </p>
+
+    <!-- Job Listing Section -->
+    <div class="job-listing">
+        <div class="job-header">
+            <div>
+                <span class="hiring-badge">We Are Hiring</span>
+                <h2 class="job-title">Embedded Systems & Project Engineer</h2>
+            </div>
+            <button mat-raised-button class="apply-now-btn" (click)="applyNow()">
+                Apply Now
+            </button>
+        </div>
+
+        <div class="job-meta">
+            <div class="meta-item">
+                <mat-icon>location_on</mat-icon>
+                <span>Raipur, Chhattisgarh</span>
+            </div>
+            <div class="meta-item">
+                <mat-icon>work</mat-icon>
+                <span>Full-Time</span>
+            </div>
+            <div class="meta-item">
+                <mat-icon>payments</mat-icon>
+                <span>Up to ₹50,000/month</span>
+            </div>
+            <div class="meta-item">
+                <mat-icon>cake</mat-icon>
+                <span>Max Age 30 Years</span>
+            </div>
+            <div class="meta-item">
+                <mat-icon>event</mat-icon>
+                <span>1 Year (3 Months Probation)</span>
+            </div>
+            <div class="meta-item deadline">
+                <mat-icon>event_busy</mat-icon>
+                <span>Last Date to Apply: 28 Sept 2026</span>
+            </div>
+        </div>
+
+        <div class="job-body">
+            <div class="job-section">
+                <h3>About Us</h3>
+                <p>Tadoba Solutions Pvt. Ltd. is a technology-driven startup based in Raipur, working in Embedded
+                    Systems, IoT, Smart Agriculture, Solar & Renewable Energy, PCB Development, Automation and
+                    technology-based project implementation. The company has experience in executing projects for
+                    Government Institutions and other organizations.</p>
+            </div>
+
+            <div class="job-section">
+                <h3>Educational Qualification</h3>
+                <p><b>B.Tech./B.E. in Electrical, Electronics & Communication (ECE), Electrical & Electronics (EEE),
+                        Electronics, Instrumentation, Mechatronics or related disciplines.</b></p>
+                <ul>
+                    <li>Candidates from IITs, NITs or reputed institutes will be preferred.</li>
+                    <li>1–2 years of relevant experience is desirable.</li>
+                    <li>Freshers may also apply with strong academic/research projects or internships.</li>
+                </ul>
+            </div>
+
+            <div class="job-section">
+                <h3>Key Skills & Responsibilities</h3>
+                <ul>
+                    <li>Embedded C/C++ and microcontroller programming</li>
+                    <li>Arduino, ESP32, Raspberry Pi or similar platforms</li>
+                    <li>Sensors, actuators, electronics and hardware interfacing</li>
+                    <li>PCB design and troubleshooting</li>
+                    <li>UART, I2C, SPI, RS485/Modbus, CAN and other protocols</li>
+                    <li>IoT, data acquisition and monitoring systems</li>
+                    <li>Prototype development, testing and field implementation</li>
+                    <li>Work on real-world projects in agriculture, solar, automation and related domains</li>
+                    <li>Good problem solving capabilities and hands-on approach</li>
+                </ul>
+            </div>
+
+            <div class="job-section">
+                <h3>Selection Process</h3>
+                <p>CV Screening &rarr; Shortlisting &rarr; Technical/Trade Test &rarr; Interview &rarr; Final
+                    Selection</p>
+                <p class="highlight">Shortlisted Candidates List: 1 – 2 October 2026<br>
+                    Interview: First Week of October 2026 (Online / Offline)</p>
+            </div>
+
+            <div class="job-section note-section">
+                <h3>Note</h3>
+                <p>The first 3 months will be an observation/probation period. Continuation after this period will be
+                    based on satisfactory performance and organizational requirements.</p>
+            </div>
+        </div>
+
+        <div class="job-footer">
+            <button mat-raised-button class="apply-now-btn" (click)="applyNow()">
+                Apply Now
+            </button>
+        </div>
+    </div>
+
+    <h6>Submit Your Application Here</h6>
+    <p>
+        <b class="note">Note:-</b> Make sure to provide accurate details and upload your
+        most recent resume. <br>
+        Our team will get back to you shortly after reviewing your application.
+    </p>
+    <!-- <form [formGroup]="careerForm">
+        <div class="form-section">
+            <mat-form-field appearance="outline">
+                <mat-label>Full Name</mat-label>
+                <input matInput formControlName="fullName">
+                <mat-error
+                    *ngIf="careerForm.controls['fullName'].hasError('required') && careerForm.controls['fullName'].touched">full
+                    name is required</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" formControlName="email">
+                <mat-error
+                    *ngIf="careerForm.controls['email'].hasError('required') && careerForm.controls['email'].touched">email
+                    is required</mat-error>
+                <mat-error
+                    *ngIf="careerForm.controls['email'].hasError('email') && careerForm.controls['email'].touched">enter
+                    valid email</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Phone Number</mat-label>
+                <input matInput type="tel" formControlName="phoneNumber">
+                <mat-error
+                    *ngIf="careerForm.controls['phoneNumber'].hasError('required') && careerForm.controls['phoneNumber'].touched">phone
+                    number is required</mat-error>
+                <mat-error
+                    *ngIf="careerForm.controls['phoneNumber'].hasError('pattern') && careerForm.controls['phoneNumber'].touched">
+                    invalid phone number
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Current Location</mat-label>
+                <input matInput formControlName="location">
+                <mat-error
+                    *ngIf="careerForm.controls['location'].hasError('required') && careerForm.controls['location'].touched">current
+                    location is required</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Query(Optional)</mat-label>
+                <textarea matInput type="textarea" formControlName="query"></textarea>
+            </mat-form-field>
+            <div>
+                <mat-label class="file-label">Upload Resume (Optional)</mat-label>
+                <input type="file" id="uploadBtn" accept="application/pdf" (change)="onFileSelected($event)" />
+                <label class="file-input-lable" for="uploadBtn">
+                    <mat-icon class="upload-icon">file_upload</mat-icon> Choose File
+                </label>
+                <div class="file-name" *ngIf="fileName">{{ fileName }}</div>
+            </div>
+            <button mat-raised-button type="submit" class="submit-btn" (click)="submitCareerForm()">Submit Form</button>
+        </div>
+    </form> -->
+</div>

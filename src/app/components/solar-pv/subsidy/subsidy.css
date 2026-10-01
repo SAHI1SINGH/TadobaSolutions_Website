@@ -1,0 +1,215 @@
+/* =========================
+   SUBSIDY SECTION
+========================= */
+
+.subsidy-section {
+  padding: 5px clamp(20px, 6vw, 140px);
+
+  background: linear-gradient(135deg, #07122b, #0a1735);
+
+  overflow: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.subsidy-header {
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+.subsidy-header h2 {
+  font-size: 40px;              /* section heading — target size */
+
+  font-weight: 800;
+
+  color: white;
+
+  margin-bottom: 6px;
+}
+
+.subsidy-header p {
+  font-size: 20px;               /* was 18px */
+
+  color: #d9d9d9;
+}
+
+/* =========================
+   TABLE WRAPPER
+========================= */
+
+.subsidy-table-wrapper {
+  overflow-x: auto;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.subsidy-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 850px;
+
+  overflow: hidden;
+}
+
+/* =========================
+   HEADER ROW
+========================= */
+
+.subsidy-table thead tr {
+  background: linear-gradient(90deg, #f7cc00, #ff9838);
+}
+
+.subsidy-table th {
+  padding: 14px 18px;
+
+  text-align: center;
+
+  color: white;
+
+  font-size: 32px;                /* left as-is — table header value, not body text */
+
+  font-weight: 700;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.subsidy-table th span {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 20px;                 /* was 14px */
+
+  font-weight: 500;
+
+  opacity: 0.95;
+}
+
+/* =========================
+   BODY
+========================= */
+
+.subsidy-table td {
+  padding: 14px 18px;
+
+  text-align: center;
+
+  color: white;
+
+  font-size: 20px;                  /* was 18px */
+
+  font-weight: 600;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  background: rgba(7, 18, 43, 0.96);
+}
+
+/* =========================
+   TOTAL ROW
+========================= */
+
+.total-row td {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 211, 77, 0.4),
+    rgba(255, 183, 0, 0.4)
+  );
+
+  color: #ffd000;
+
+  font-weight: 800;
+}
+
+/* =========================
+   NOTE BOX
+========================= */
+
+.subsidy-note {
+  margin-top: 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px 18px;
+
+  border-radius: 16px;
+
+  border: 1px solid rgba(255, 211, 77, 0.4);
+
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.subsidy-note i {
+  width: 37px;
+  height: 30px;
+
+  min-width: 30px;
+
+  border-radius: 50%;
+
+  background: #ffd000;
+
+  color: #07122b;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;                  /* was 18px */
+}
+
+.subsidy-note p {
+  color: white;
+
+  font-size: 20px;                   /* was 15px */
+
+  line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .subsidy-section {
+    padding: 0 20px;
+  }
+
+  .subsidy-header {
+    margin-bottom: 14px;
+  }
+
+  .subsidy-header h2 {
+    font-size: 32px;                  /* scaled down proportionally from 40px */
+  }
+
+  .subsidy-header p {
+    font-size: 16px;                   /* scaled down proportionally from 20px */
+  }
+
+  .subsidy-table th {
+    font-size: 22px;
+    padding: 10px 12px;
+  }
+
+  .subsidy-table td {
+    font-size: 16px;                    /* scaled down proportionally from 20px */
+    padding: 10px 12px;
+  }
+}

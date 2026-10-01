@@ -1,0 +1,32 @@
+<section class="process-section">
+  <div class="process-track">
+    <div class="process-step" *ngFor="let s of steps">
+      <div class="step-icon-wrap">
+        <i [class]="s.icon"></i>
+      </div>
+      <h4>{{ s.step }}</h4>
+      <p>
+        {{ s.description }}
+        <a *ngIf="s.link" [href]="s.link.url" target="_blank">{{
+          s.link.text
+        }}</a>
+      </p>
+    </div>
+
+    <!-- ADD INSIDE .process-track, right after the closing </div> of the last process-step -->
+
+    <div class="process-edge-icon process-edge-icon--left">
+      <img
+        src="/assets/images/solar-pv/process/2.png"
+        alt="Plug connector icon"
+      />
+    </div>
+
+    <div class="process-edge-icon process-edge-icon--right">
+      <img
+        src="/assets/images/solar-pv/process/1.png"
+        alt="Solar panel icon"
+      />
+    </div>
+  </div>
+</section>

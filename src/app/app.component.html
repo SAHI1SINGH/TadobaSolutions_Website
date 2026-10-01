@@ -1,0 +1,9 @@
+<section>
+    <app-top-contact-bar></app-top-contact-bar>
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+    <button class="back-to-top" *ngIf="showButton" (click)="scrollToTop()">
+        <mat-icon>arrow_upward</mat-icon>
+    </button>
+</section>

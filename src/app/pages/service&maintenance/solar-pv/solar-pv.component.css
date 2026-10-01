@@ -1,0 +1,2330 @@
+* {
+  box-sizing: border-box;
+}
+/* =====================================================
+   HERO SECTION (Solar PV + BESS)
+===================================================== */
+.hero-section {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  max-width: 100%;
+  min-height: auto;
+  padding: 15px;
+  margin: 12px auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+/* --- LEFT PANEL --- */
+/* --- LEFT PANEL --- */
+.hero-left {
+  position: relative;
+  flex: 0 0 460px;
+  background-image:
+    linear-gradient(160deg, rgba(10, 31, 68, 0.88) 0%, rgba(18, 58, 114, 0.85) 55%, rgba(15, 46, 92, 0.9) 100%),
+    url("/assets/images/solar-pv/solar.jpg");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: normal;
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 10px;
+  z-index: 2;
+  border-radius: 18px 90px 18px 18px;
+}
+
+.hero-icon-item {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-icon-circle {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 3px solid #35d451;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.hero-icon-circle i {
+  font-size: 20px;
+  color: #35d451;
+}
+
+.hero-icon-circle img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.hero-icon-item p {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.hero-icon-item p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 55%;
+  background-color: #35d451;
+  border-radius: 4px;
+}
+
+/* --- RIGHT PANEL --- */
+.hero-right {
+  position: relative;
+  flex: 1 1 380px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-badge {
+  background-color: #fdf3c7;
+  border-radius: 6px;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-badge h4 {
+  margin: 0 0 3px;
+  color: #1a9c3d;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.hero-badge p {
+  margin: 0;
+  color: #e0620a;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-bottom: 2px solid #1a9c3d;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+/* =========================
+   APPLICATIONS CARD
+========================= */
+
+.hero-applications-card {
+  position: relative;
+  background-image:
+    linear-gradient(rgba(199, 236, 236, 0.88), rgba(199, 236, 236, 0.88)),
+    url("/assets/images/solar-pv/bess.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  padding: 20px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+/* =========================
+   APPLICATIONS BODY — holds app-list column + image
+========================= */
+
+.hero-applications-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 16px;
+  flex: 1;
+}
+
+/* =========================
+   TITLE — heading on one line, full form below it
+========================= */
+
+.hero-title {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;          /* was flex-start — centers h1 and p horizontally */
+  gap: 2px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero-title h1 {
+  margin: 0;
+  color: #1a2a6c;
+  font-size: 40px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.hero-title p {
+  margin: 0;
+  color: #e0620a;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* =========================
+   APP LIST — text size matched to left panel
+========================= */
+
+.hero-app-list {
+  flex: 0 0 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 2px;
+}
+
+.hero-app-list h5 {
+  margin: 0 0 16px;
+  color: #17233f;
+  font-size: 20px;                /* was 40px — matches left panel text size */
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.hero-app-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.hero-app-list li {
+  font-size: 20px;                 /* was 30px — matches left panel text size */
+  font-weight: 700;
+  color: #17233f;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.3;
+}
+
+.hero-app-icon {
+  margin-top: 1px;
+}
+
+/* =========================
+   IMAGE BOX
+========================= */
+
+.hero-image-box {
+  flex: 1;
+  width: auto;
+  aspect-ratio: unset;
+  max-height: 460px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  border: 5px solid #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  background-color: #a9d8d8;
+  align-self: stretch;
+}
+
+.hero-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 900px) {
+  .hero-left {
+    flex: 1 1 100%;
+  }
+
+  .hero-left::after {
+    display: none;
+  }
+
+  .hero-right {
+    flex: 1 1 100%;
+  }
+
+  .hero-applications-body {
+    flex-direction: column;
+  }
+  .hero-app-list {
+    flex: 0 0 auto;
+  }
+
+  .hero-image-box {
+    height: 160px;
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-left {
+    padding: 25px 20px;
+    gap: 20px;
+  }
+
+  .hero-icon-circle {
+    width: 46px;
+    height: 46px;
+  }
+
+  .hero-icon-circle img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .hero-icon-item p {
+    font-size: 30px;
+  }
+
+  .hero-right {
+    padding: 25px 20px;
+  }
+
+  .hero-title h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero-title p {
+    font-size: 0.85rem;
+  }
+
+  .hero-badge h4 {
+    font-size: 1rem;
+  }
+
+  .hero-badge p {
+    font-size: 0.8rem;
+  }
+
+  .hero-app-list h5,
+  .hero-app-list li {
+    font-size: 18px;
+  }
+}
+/* =====================================================
+   TATA POWER SOLAROOF BANNER
+===================================================== */
+.tata-banner-section {
+  position: relative;
+  max-width: 100%;
+  padding-top: 20px;
+  margin: 0px auto;
+  border-radius: 0px;
+  overflow: hidden;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-image: url("/assets/images/solar-pv/banner-bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+/* dark overlay so text pops on any background image */
+.tata-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.25) 50%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+  z-index: 1;
+}
+
+/* --- LEFT: TATA logo + tagline --- */
+.tata-banner-left {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  margin-left: 60px;
+}
+
+.tata-logo-img {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: -6px;
+  margin-left: 80px;
+}
+
+.tata-tagline {
+  margin: 0;
+  display: flex;
+  font-size: 80px;
+  flex-direction: column;
+  gap: 0;
+  margin-left: 30px;
+}
+
+.tata-tagline-brand {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  margin-left: 20px;
+}
+
+.tata-tagline-main {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* --- RIGHT: Solaroof logo + partner text --- */
+.tata-banner-right {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  margin-right: 80px;
+}
+
+.tata-solaroof-img {
+  height: 170px;
+  width: auto;
+  object-fit: contain;
+  margin-right: 80px;
+}
+
+.tata-partner-text {
+  margin: 0;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  margin-right: 20px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 768px) {
+  .tata-banner-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px 24px;
+  }
+
+  .tata-banner-right {
+    align-items: flex-start;
+  }
+
+  .tata-logo-img {
+    height: 55px;
+  }
+
+  .tata-solaroof-img {
+    height: 50px;
+  }
+
+  .tata-tagline {
+    font-size: 1.1rem;
+  }
+
+  .tata-partner-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================
+   IMAGE STRIP SECTION
+========================= */
+
+.image-strip-section{
+  padding: 0px;
+  width: 100%;
+  background: #000;
+}
+
+.image-strip{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+
+.strip-item{
+  overflow: hidden;
+  height: 240px;
+}
+
+.strip-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.strip-item:hover img{
+  transform: scale(1.06);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width: 1024px){
+
+  .strip-item{
+    height: 200px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 768px){
+
+  .image-strip{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .strip-item{
+    height: 160px;
+  }
+
+}
+/* =====================================================
+   STATS SECTION
+===================================================== */
+.stats-section {
+  max-width: 100%;
+  padding: 15px;
+  margin: 30px auto;
+  padding: 24px 20px 6px;
+  border-top: 2px solid #d6e4f0;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stat-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 22px 22px 24px;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  text-align: center;
+  gap: 4px;
+  border-bottom: 5px solid var(--accent, #17233f);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+/* wavy line texture, behind the text */
+.stat-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.35;
+  background-image: repeating-radial-gradient(
+    circle at 0% 30%,
+    var(--accent, #17233f) 0px,
+    transparent 1px,
+    transparent 14px
+  );
+  background-size: 220px 220px;
+  background-repeat: no-repeat;
+  background-position: -20px 10%;
+  mask-image: linear-gradient(120deg, #000 0%, transparent 70%);
+  -webkit-mask-image: linear-gradient(120deg, #000 0%, transparent 70%);
+}
+
+.stat-card::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  bottom: 18px;
+  width: 40px;
+  height: 40px;
+  z-index: 0;
+  background-image: radial-gradient(#35d451 1.5px, transparent 1.5px);
+  background-size: 8px 8px;
+  opacity: 0.7;
+}
+
+.stat-card-value,
+.stat-card-label,
+.stat-card-desc {
+  position: relative;
+  z-index: 1;
+}
+
+.stat-card-value {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--accent, #17233f);
+  line-height: 1.1;
+}
+
+.stat-card-label {
+  margin: 4px 0 8px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #111827;
+}
+
+.stat-card-desc {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1.35;
+}
+
+/* --- color themes --- */
+.stat-card--teal {
+  --accent: #0aa5b8;
+  background-color: #e2fbfc;
+}
+
+.stat-card--yellow {
+  --accent: #e0b800;
+  background-color: #fdf7de;
+}
+
+.stat-card--orange {
+  --accent: #f0692a;
+  background-color: #fdeade;
+  background-color: #fdece0;
+}
+
+.stat-card--purple {
+  --accent: #a616c4;
+  background-color: #f7e6fb;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 992px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    min-height: unset;
+    padding: 20px;
+  }
+
+  .stat-card-value {
+    font-size: 2.2rem;
+  }
+}
+
+/* =====================================================
+   PM SURYA GHAR SUBSIDY SECTION
+===================================================== */
+.subsidy-section {
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+/* --- LEFT --- */
+.subsidy-left {
+  flex: 1 1 560px;
+  min-width: 300px;
+}
+
+.subsidy-emblem-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding-left: 6px;
+  border-left: 3px solid #ff9933;
+}
+
+.subsidy-emblem-img {
+  height: 66px;
+  width: auto;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.subsidy-gov-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-left: 10px;
+}
+
+.subsidy-gov-hindi {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.1;
+}
+
+.subsidy-gov-eng {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.gov-line1 {
+  font-size: 1.15rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.gov-line2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.gov-of {
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.gov-india {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.gov-india .i {
+  color: #ff9933;
+}
+
+.gov-india .n {
+  background: linear-gradient(
+    90deg,
+    #138808 0%,
+    #138808 34%,
+    #000080 66%,
+    #000080 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.gov-india .d {
+  color: #000080;
+}
+
+.gov-india .ia {
+  color: #000080;
+}
+
+.subsidy-title {
+  margin: 0 0 16px;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #14141f;
+  line-height: 1.15;
+}
+
+.subsidy-title-highlight {
+  display: block;
+  color: #1a4fa0;
+}
+
+.subsidy-desc {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #1f1f1f;
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 1200px;
+}
+
+/* --- RIGHT --- */
+.subsidy-right {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.subsidy-photo-frame {
+  display: flex;
+  gap: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+  /* background-color: #f4f4f4; */
+}
+
+.subsidy-person {
+  width: 200px;
+  height: 240px;
+  overflow: hidden;
+}
+
+.subsidy-person-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.subsidy-names-row {
+  display: flex;
+  gap: 20px;
+}
+
+.subsidy-person-name {
+  width: 200px;
+  margin: 0;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.subsidy-badges-row {
+  display: flex;
+  gap: 20px;
+}
+
+.subsidy-badge {
+  width: 200px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #f0692a;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 900px) {
+  .subsidy-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .subsidy-right {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .subsidy-title {
+    font-size: 1.8rem;
+  }
+
+  .subsidy-desc {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .subsidy-person,
+  .subsidy-person-name,
+  .subsidy-badge {
+    width: 140px;
+  }
+
+  .subsidy-person {
+    height: 170px;
+  }
+}
+
+/* =====================================================
+   PM SURYA GHAR BENEFITS SECTION
+===================================================== */
+.benefits-section {
+  max-width: 100%;
+  padding: 15px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+.benefits-header {
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.benefits-title {
+  margin: 0 0 10px;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #e0620a;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.benefits-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.benefits-divider-line {
+  height: 4px;
+  flex: 1 1 200px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, rgba(74, 47, 214, 0) 0%, #4a2fd6 100%);
+}
+
+.benefits-divider-line--fade {
+  background: linear-gradient(90deg, #4a2fd6 0%, rgba(74, 47, 214, 0) 100%);
+}
+
+.benefits-subtitle {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #1a2a6c;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.benefits-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.benefit-item {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 16px;
+  position: relative;
+}
+
+.benefit-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background-color: #e2e5ec;
+}
+
+.benefit-icon-circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+}
+
+.benefit-icon-circle i {
+  font-size: 34px;
+  line-height: 1;
+}
+
+.benefit-icon-circle--navy {
+  border: 2.5px solid #2a3f9e;
+  color: #2a3f9e;
+  background-color: #ffffff;
+}
+.benefit-icon-circle img {
+  width: 70px;
+  height: 70px;
+}
+
+.benefit-icon-circle--green {
+  border: 2.5px solid #1cbf73;
+  color: #1cbf73;
+  background-color: #ffffff;
+}
+
+.benefit-icon-circle--navy-fill {
+  border: 2.5px solid #2a3f9e;
+  /* background-color: #22307a; */
+  color: #2a3f9e;
+}
+
+.benefit-label {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #2a3f9e;
+  line-height: 1.4;
+}
+
+.benefit-item:nth-child(2) .benefit-label,
+.benefit-item:nth-child(4) .benefit-label {
+  color: #1cbf73;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 900px) {
+  .benefits-grid {
+    flex-wrap: wrap;
+    row-gap: 32px;
+  }
+
+  .benefit-item {
+    flex: 0 0 33.33%;
+  }
+
+  .benefit-item:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefits-title {
+    font-size: 1.2rem;
+  }
+
+  .benefits-subtitle {
+    font-size: 1rem;
+  }
+
+  .benefit-item {
+    flex: 0 0 50%;
+  }
+
+  .benefit-icon-circle {
+    width: 76px;
+    height: 76px;
+  }
+
+  .benefit-icon-circle svg {
+    width: 38px;
+    height: 38px;
+  }
+
+  .benefit-label {
+    font-size: 0.9rem;
+  }
+}
+
+/* =====================================================
+   TATA SOLAR KIT SECTION
+===================================================== */
+.kit-section {
+  max-width: 100%;
+  padding: 15px;
+  margin: 40px auto;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+.kit-banner {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto 20px;
+  padding: 4px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #e0620a 0%,
+    #ffd23f 25%,
+    #1a2a6c 50%,
+    #ffd23f 75%,
+    #e0620a 100%
+  );
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.kit-banner-title {
+  margin: 0;
+  background-color: #1a2a9e;
+  border-radius: 7px;
+  padding: 5px 30px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.kit-banner-highlight {
+  color: #ffd23f;
+}
+
+/* --- Blue background strip holding the cards --- */
+.kit-strip {
+  background-color: #1a2a9e;
+  border-radius: 14px;
+  padding: 46px 20px 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Individual card --- */
+.kit-card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border-bottom: 4px solid #1cbf73;
+  padding: 30px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.kit-badge {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #ffffff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.kit-badge i {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.kit-badge--navy {
+  background-color: #1a2a9e;
+}
+
+.kit-badge--green {
+  background-color: #1cbf73;
+}
+
+.kit-card-image {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.kit-card-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.kit-card-label {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #14141f;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 992px) {
+  .kit-strip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .kit-banner-title {
+    font-size: 1.3rem;
+    padding: 14px 18px;
+  }
+
+  .kit-strip {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 40px 14px 14px;
+  }
+
+  .kit-card-image {
+    height: 100px;
+  }
+
+  .kit-card-label {
+    font-size: 0.9rem;
+  }
+}
+
+/* =====================================================
+   PM SURYA GHAR PROJECTS GALLERY
+===================================================== */
+.projects-section {
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 15px;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+.projects-banner {
+  display: inline-block;
+  background-color: #0e6c78;
+  border-radius: 6px;
+  padding: 16px 32px;
+  margin-bottom: 20px;
+}
+
+.projects-banner-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.project-photo {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #e5e7eb;
+}
+
+.project-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-photo:hover img {
+  transform: scale(1.05);
+}
+
+.projects-grid--highlight {
+  grid-template-columns: repeat(5, 1fr);
+  border: 2.5px solid #7a3fe0;
+  border-radius: 6px;
+  padding: 6px;
+  margin-top: 4px;
+}
+.project-photo--more {
+  aspect-ratio: 4 / 3;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #0e6c78, #14939f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-photo--more:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.project-photo--more span {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0 10px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .projects-grid--highlight {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-banner-title {
+    font-size: 1.15rem;
+  }
+  .project-photo--more span {
+    font-size: 0.9rem;
+  }
+
+  .projects-banner {
+    padding: 12px 20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .projects-grid--highlight {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .projects-grid,
+  .projects-grid--highlight {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =====================================================
+   COMMERCIAL SOLAR PV PROJECTS
+===================================================== */
+.commercial-section {
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 15px;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+.commercial-banner {
+  display: inline-block;
+  background-color: #0e6c78;
+  border-radius: 6px;
+  padding: 16px 32px;
+  margin-bottom: 24px;
+}
+
+.commercial-banner-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.commercial-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.commercial-card {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: #e5e7eb;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.commercial-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.commercial-card:hover img {
+  transform: scale(1.05);
+}
+
+.commercial-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0e6c78;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 8px 10px;
+  line-height: 1.3;
+}
+
+.commercial-card--highlight {
+  outline: 3px solid #7a3fe0;
+  outline-offset: 2px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 992px) {
+  .commercial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .commercial-banner-title {
+    font-size: 1.15rem;
+  }
+
+  .commercial-banner {
+    padding: 12px 20px;
+  }
+
+  .commercial-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .commercial-caption {
+    font-size: 0.82rem;
+    padding: 7px 8px;
+  }
+}
+
+/* =====================================================
+   UTILITY SCALE SOLAR PV PROJECT
+===================================================== */
+.utility-section {
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 15px;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+.utility-banner {
+  display: inline-block;
+  background-color: #0e6c78;
+  border-radius: 6px;
+  padding: 16px 32px;
+  margin-bottom: 24px;
+}
+
+.utility-banner-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* --- Two large photos --- */
+.utility-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.utility-photo {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #e5e7eb;
+}
+
+.utility-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Overlapping caption bar --- */
+.utility-caption-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: -22px;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.utility-caption {
+  background: linear-gradient(180deg, #1391a0 0%, #0e6c78 100%);
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 14px 30px;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  max-width: 780px;
+  width: 100%;
+}
+
+/* --- Yellow service pills --- */
+.utility-pills {
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.utility-pill {
+  display: flex;
+  align-items: center;
+  background-color: #fdf3c7;
+  border: 1.5px solid #f0b90b;
+  border-radius: 30px;
+  overflow: hidden;
+  min-height: 56px;
+}
+
+.utility-pill-icon {
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  background-color: #f0b90b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+}
+
+.utility-pill-icon i {
+  font-size: 30px;
+  color: #14141f;
+}
+
+.utility-pill-text {
+  flex: 1;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #14141f;
+  padding: 10px 20px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 768px) {
+  .utility-photos {
+    grid-template-columns: 1fr;
+  }
+
+  .utility-caption-wrap {
+    padding: 0 16px;
+  }
+
+  .utility-caption {
+    font-size: 0.95rem;
+    padding: 12px 18px;
+  }
+
+  .utility-pill-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .utility-banner-title {
+    font-size: 1.15rem;
+  }
+
+  .utility-pill-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .utility-pill-icon i {
+    font-size: 17px;
+  }
+}
+
+/* =====================================================
+   AGRIVOLTAICS SECTION
+===================================================== */
+.agri-section {
+  max-width: 100%;
+  margin: 0px auto;
+  padding: 15px;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+.agri-banner {
+  display: inline-block;
+  background-color: #0e6c78;
+  border-radius: 6px;
+  padding: 16px 32px;
+  margin-bottom: 24px;
+}
+
+.agri-banner-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.agri-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+}
+.agri-left,
+.agri-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.agri-photos-large,
+.agri-photos-grid {
+  flex: 1;
+}
+/* --- LEFT: two large photos --- */
+.agri-photos-large {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.agri-photos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.agri-photo-large {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #e5e7eb;
+}
+
+.agri-photo-large--navy {
+  border: 3px solid #1a2a6c;
+}
+
+.agri-photo-large--purple {
+  border: 3px solid #7a3fe0;
+}
+
+.agri-photo-large,
+.agri-photo-small {
+  height: 100%;
+}
+
+.agri-photo-large img,
+.agri-photo-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- RIGHT: 2x2 grid of small photos --- */
+.agri-photos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.agri-photo-small {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #e5e7eb;
+}
+
+.agri-photo-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.agri-photo-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #17a2c9;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 5px 6px;
+  line-height: 1.3;
+}
+
+/* --- Shared caption under each column --- */
+.agri-caption {
+  margin: 14px 0 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #14141f;
+  text-align: center;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 992px) {
+  .agri-content {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+}
+
+@media (max-width: 480px) {
+  .agri-banner-title {
+    font-size: 1.1rem;
+  }
+
+  .agri-photos-large {
+    gap: 8px;
+  }
+
+  .agri-caption {
+    font-size: 1.05rem;
+  }
+
+  .agri-photo-label {
+    font-size: 0.7rem;
+  }
+}
+
+/* =====================================================
+   OUR SOLAR PV PRODUCTS
+===================================================== */
+.products-section {
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 0 20px 20px;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+.products-banner {
+  display: inline-block;
+  background-color: #0e6c78;
+  border-radius: 6px;
+  padding: 16px 32px;
+  margin-bottom: 26px;
+}
+
+.products-banner-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 22px;
+  background: linear-gradient(150deg, #0b2f5c 0%, #1c7fc0 55%, #4fc3e8 100%);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  overflow: hidden;
+}
+
+.product-card-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-card-tag {
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 800;
+  z-index: 2;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.products-labels {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.product-label {
+  margin: 0;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #14141f;
+}
+
+.product-label--highlight {
+  border: 2.5px solid #7a3fe0;
+  border-radius: 6px;
+  padding: 6px 10px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 992px) {
+  .products-grid,
+  .products-labels {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-banner-title {
+    font-size: 1.15rem;
+  }
+
+  .products-grid,
+  .products-labels {
+    grid-template-columns: 1fr;
+  }
+
+  .product-label {
+    font-size: 1rem;
+  }
+}
+
+/* =====================================================
+   O&M SERVICES SECTION
+===================================================== */
+.om-section {
+  max-width: 100%;
+  margin: 0px auto;
+  padding: 0 20px 20px;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+.om-banner {
+  background-color: #0e6c78;
+  padding: 16px 26px;
+  margin-bottom: 0;
+}
+
+.om-banner-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.om-content {
+  position: relative;
+  background-color: #eef2f8;
+  border: 1px solid #dde3ed;
+  border-top: none;
+  padding: 10px 30px 40px; /* fixed: was invalid "-30px 30px 40px" */
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 20px;
+  align-items: start;
+  overflow: hidden;
+  min-height: 480px;
+}
+
+.om-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background-color: #fde3cf;
+  border: 2px solid #e0620a;
+  border-radius: 10px;
+  padding: 14px 20px 14px 22px; /* extra left padding around icon */
+  margin-bottom: 15px;
+}
+
+.om-badge i {
+  font-size: 1.6rem;
+  color: #14141f;
+  padding-left: 4px; /* small breathing room before icon */
+}
+
+.om-blueprint-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: #eef2f8;
+  background-image:
+    linear-gradient(rgba(238, 242, 248, 0.92), rgba(238, 242, 248, 0.75)),
+    url("/assets/images/solar-pv/background/1.png");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+.om-left {
+  position: relative;
+  z-index: 1;
+}
+
+.om-badge i {
+  font-size: 1.8rem;
+  color: #14141f;
+}
+
+.om-badge span {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #14141f;
+}
+
+/* --- Checklist --- */
+.om-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.om-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.om-list-item i {
+  flex: 0 0 auto;
+  width: 36px;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #4a2fd6;
+  margin-top: 3px;
+}
+
+.om-list-item span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #14141f;
+  line-height: 1.4;
+}
+
+/* --- Right mascot --- */
+.om-right {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+}
+
+.om-mascot {
+  max-width: 120%;
+  max-height: 460px;
+  object-fit: contain;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 900px) {
+  .om-content {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+
+  .om-right {
+    order: -1;
+    max-height: 260px;
+  }
+
+  .om-mascot {
+    max-height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .om-banner-title {
+    font-size: 0.95rem;
+  }
+
+  .om-badge span {
+    font-size: 1.1rem;
+  }
+
+  .om-list-item span {
+    font-size: 0.95rem;
+  }
+}
+
+/* =====================================================
+   TRAINING & SKILL DEVELOPMENT SECTION
+===================================================== */
+.training-section {
+  box-sizing: border-box;
+  max-width: 98.5%;
+  margin: 0px auto 40px;
+  padding: 34px 40px 40px;
+  border-radius: 14px;
+  background-color: #0e6c78;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.training-header {
+  margin-bottom: 26px;
+}
+
+.training-title {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.training-subtitle {
+  margin: 0;
+  color: #d9e021;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* --- Yellow highlight box --- */
+.training-highlight {
+  background-color: #f5b700;
+  border: 2px solid #1a1a1a;
+  border-radius: 10px;
+  padding: 16px 26px;
+  margin: 0 auto 34px;          /* center the box itself */
+  width: fit-content;            /* box shrinks to text size */
+  max-width: 100%;               /* prevents overflow on small screens */
+  text-align: center;            /* centers text inside */
+}
+
+.training-highlight-title {
+  margin: 0 0 4px;
+  color: #14141f;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.training-highlight-desc {
+  margin: 0;
+  color: #14141f;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+/* --- Stat cards --- */
+.training-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.training-stat-card {
+  border-radius: 14px;
+  border-width: 2px;
+  border-style: solid;
+  padding: 20px 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.training-stat-value {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #14141f;
+  line-height: 1.1;
+}
+
+.training-stat-label {
+  margin: 4px 0 6px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #14141f;
+}
+
+.training-stat-desc {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #1f2937;
+  line-height: 1.35;
+}
+
+/* --- color themes --- */
+.training-stat-card--blue {
+  background-color: #d6f3fb;
+  border-color: #6bc9e8;
+}
+
+.training-stat-card--green {
+  background-color: #d9f7e3;
+  border-color: #5cd68a;
+}
+
+.training-stat-card--orange {
+  background-color: #fde3cf;
+  border-color: #f0692a;
+}
+
+.training-stat-card--purple {
+  background-color: #f4d9fb;
+  border-color: #b93fd6;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 992px) {
+  .training-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .training-title {
+    font-size: 1.3rem;
+  }
+
+  .training-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .training-section {
+    padding: 24px 20px 28px;
+  }
+
+  .training-highlight-title {
+    font-size: 1rem;
+  }
+
+  .training-highlight-desc {
+    font-size: 0.9rem;
+  }
+
+  .training-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .training-stat-value {
+    font-size: 1.9rem;
+  }
+}
+/* --- Subtitle purple border box --- */
+.training-subtitle-wrap {
+  display: inline-block;
+  border: 2px solid #7a3fe0;
+  border-radius: 6px;
+  padding: 6px 20px;
+  margin-bottom: 26px;
+}
+
+.training-subtitle {
+  margin: 0;
+  color: #d9e021;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.training-header {
+  margin-bottom: 10px;
+}
+
+/* =====================================================
+   TRAINING EXTRA FEATURES (white strip below teal box)
+===================================================== */
+.training-features {
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0 auto 0px;
+  padding: 0px 30px;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  margin-top: -20px;
+}
+
+.training-features-row {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  margin-bottom: 10px;
+}
+
+.training-features-row--single {
+  margin-bottom: 0;
+}
+
+.training-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  max-width: 360px;
+}
+
+.training-feature-icon {
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid #2a3f9e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.training-feature-icon i {
+  font-size: 1.3rem;
+  color: #2a3f9e;
+}
+
+.training-feature-text h6 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #14141f;
+}
+
+.training-feature-text p {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1.4;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 768px) {
+  .training-features-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .training-feature {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .training-subtitle-wrap {
+    padding: 5px 14px;
+  }
+
+  .training-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* =====================================================
+   TRAINING PHOTO BANNER
+===================================================== */
+.training-photo {
+  box-sizing: border-box;
+  max-width: 98.5%;
+  margin: 5px auto 40px;
+  padding: 0;
+}
+
+.training-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+  .training-photo {
+    padding: 0 20px;
+  }
+}

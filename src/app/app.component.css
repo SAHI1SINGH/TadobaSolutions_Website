@@ -1,0 +1,45 @@
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 35px;
+  background-color: #1a2a36;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0.9;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+.back-to-top:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.back-to-top:focus {
+  outline: none;
+}
+app-header {
+  margin-bottom: 40px;
+}
+
+
+@media (max-width: 1025px) {
+  app-top-contact-bar {
+    display: none;
+  }
+}

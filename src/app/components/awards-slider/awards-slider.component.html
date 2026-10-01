@@ -1,0 +1,15 @@
+<div class="container swiper">
+    <div class="slider-wrapper">
+        <div class="card-list swiper-wrapper">
+            @for (award of awards; track $index) {
+            <div class="card-item swiper-slide">
+                <img [src]="award.imgUrl" alt="" class="card-img">
+                <h2 class="card-title">{{award.title}}</h2>
+            </div>
+            }
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+        <div class="swiper-slide-button swiper-button-prev"></div>
+        <div class="swiper-slide-button swiper-button-next"></div>
+    </div>
+</div>

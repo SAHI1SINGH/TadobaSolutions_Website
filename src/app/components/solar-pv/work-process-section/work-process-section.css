@@ -1,0 +1,324 @@
+/* =========================
+   WORK PROCESS
+========================= */
+
+.work-process {
+  padding: 5px clamp(16px, 6vw, 160px);
+  background: white;
+  overflow: hidden;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+  text-align: center;
+  font-size: 40px;                                    /* section heading — target size */
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: clamp(24px, 4vw, 40px);
+  color: #00072b;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =========================
+   TIMELINE ITEM
+========================= */
+
+.timeline-item {
+  margin-bottom: 20px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   CONTENT BOX
+========================= */
+
+.timeline-content {
+  width: 100%;
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.timeline-content.step1 {
+  border: #0d8b63 1px solid;
+}
+
+.timeline-content.step2 {
+  border: #2962ff 1px solid;
+}
+
+.timeline-content.step3 {
+  border: #d97706 1px solid;
+}
+
+.timeline-content.step4 {
+  border: #7c3aed 1px solid;
+}
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.content-left {
+  flex: 1;
+  padding: clamp(10px, 2vw, 18px);
+}
+
+/* =========================
+   RIGHT BOX
+========================= */
+
+.content-right {
+  width: clamp(140px, 18vw, 190px);
+  background: #ececec;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 8px 16px;
+}
+
+.content-right h1 {
+  font-size: clamp(48px, 6.5vw, 80px);                   /* left large — big step number */
+  margin-bottom: 6px;
+  line-height: 1;
+}
+
+.content-right p {
+  font-size: 20px;                                        /* was clamp(16px,2.2vw,20px) */
+  font-weight: 600;
+  text-align: center;
+}
+
+/* =========================
+   STEP TEXT
+========================= */
+
+.step {
+  font-size: 20px;                                         /* was 16px */
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.green-text {
+  color: #0d8b63;
+}
+
+.blue-text {
+  color: #2962ff;
+}
+
+.orange-text {
+  color: #d97706;
+}
+
+.purple-text {
+  color: #7c3aed;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.content-left h3 {
+  margin: 6px 0;
+  font-size: clamp(28px, 3.6vw, 36px);                       /* was 26-34px */
+  line-height: 1.25;
+  color: #111;
+}
+
+.content-left p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 20px;                                            /* was clamp(16px,1.7vw,18px) */
+}
+
+/* =========================
+   TAGS
+========================= */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tags span {
+  padding: 8px 14px;
+  border-radius: 30px;
+  background: #dff7ea;
+  color: #0aa84f;
+  font-size: 18px;                                            /* was clamp(13px,1.6vw,15px) */
+  font-weight: 600;
+}
+
+/* =========================
+   LARGE SCREEN
+========================= */
+
+@media (max-width: 1400px) {
+  .timeline {
+    max-width: 1100px;
+  }
+}
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media (max-width: 1024px) {
+  .work-process {
+    padding: 40px 24px;
+  }
+}
+
+/* =========================
+   TABLET + MOBILE
+========================= */
+
+@media (max-width: 992px) {
+  .work-process {
+    padding: 35px 20px;
+  }
+
+  .timeline-item {
+    margin-bottom: 16px;
+  }
+
+  .timeline-content {
+    flex-direction: column;
+  }
+
+  .content-right {
+    width: 100%;
+    padding: 14px 0;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+  .work-process {
+    padding: 25px 16px;
+  }
+
+  .section-title {
+    font-size: 32px;                                            /* scaled down from 40px */
+    margin-bottom: 20px;
+  }
+
+  .timeline-content {
+    border-radius: 18px;
+  }
+
+  .content-left {
+    padding: 12px 14px;
+  }
+
+  .content-left h3 {
+    font-size: 26px;                                              /* was 24px */
+  }
+
+  .content-left p {
+    font-size: 17px;                                              /* was 15px */
+  }
+
+  .content-right h1 {
+    font-size: 54px;
+  }
+
+  .content-right p {
+    font-size: 18px;                                               /* was 17px */
+  }
+
+  .step {
+    font-size: 17px;
+  }
+
+  .tags {
+    gap: 6px;
+  }
+
+  .tags span {
+    padding: 6px 12px;
+    font-size: 15px;                                                 /* was 13px */
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+  .work-process {
+    padding: 20px 12px;
+  }
+
+  .timeline-item {
+    margin-bottom: 14px;
+  }
+
+  .timeline-content {
+    border-radius: 16px;
+  }
+
+  .content-left {
+    padding: 10px;
+  }
+
+  .content-left h3 {
+    font-size: 24px;                                                  /* was 22px */
+  }
+
+  .content-left p {
+    font-size: 16px;                                                  /* was 14px */
+  }
+
+  .content-right {
+    padding: 12px 0;
+  }
+
+  .content-right h1 {
+    font-size: 44px;
+  }
+
+  .content-right p {
+    font-size: 16px;                                                   /* was 14px */
+  }
+
+  .step {
+    font-size: 15px;
+  }
+
+  .tags span {
+    font-size: 14px;                                                    /* was 12px */
+    padding: 6px 10px;
+  }
+}

@@ -1,0 +1,227 @@
+.container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container h6{
+  font-size: 22px;
+  color: #3d4494;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.container h1{
+  font-size: 24px;
+  color: #3d4494;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+}
+.note{
+  color: red;
+}
+.container p{
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+/* Job Listing Section */
+.job-listing {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 30px;
+  border-radius: 16px;
+  box-shadow: rgba(149, 157, 165, 0.25) 0px 8px 24px;
+  overflow: hidden;
+  background: #fff;
+}
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3d4494;
+  color: #fff;
+  padding: 24px 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.hiring-badge {
+  display: inline-block;
+  background: #ffd200;
+  color: #3d4494;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.job-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  text-align: left;
+}
+.apply-now-btn {
+  background-color: #ffd200 !important;
+  color: #3d4494 !important;
+  font-weight: 700 !important;
+  padding: 6px 20px !important;
+  border-radius: 8px !important;
+}
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 18px 28px;
+  background: #f4f5fb;
+  border-bottom: 1px solid #e2e2ef;
+}
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #3d4494;
+  font-weight: 500;
+}
+.meta-item mat-icon {
+  font-size: 18px;
+  height: 18px;
+  width: 18px;
+}
+.meta-item.deadline {
+  color: #c0392b;
+  font-weight: 700;
+}
+.job-body {
+  padding: 24px 28px;
+  text-align: left;
+}
+.job-section {
+  margin-bottom: 20px;
+}
+.job-section h3 {
+  color: #3d4494;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  border-left: 4px solid #ffd200;
+  padding-left: 10px;
+}
+.job-section p {
+  text-align: left;
+  font-size: 14.5px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+.job-section ul {
+  margin: 0;
+  padding-left: 22px;
+}
+.job-section ul li {
+  font-size: 14.5px;
+  color: #333;
+  line-height: 1.6;
+  text-align: left;
+}
+.job-section .highlight {
+  color: #3d4494;
+  font-weight: 600;
+}
+.note-section {
+  background: #f4f5fb;
+  padding: 14px 16px;
+  border-radius: 10px;
+}
+.job-footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 15px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+input[type="file"] {
+  display: none;
+}
+
+.file-input-lable {
+  width: 130px;
+  font-family: "Roboto", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: baseline;
+  color: #373737;
+  background-color: #e2e2e2;
+  border: 2px solid gainsboro;
+  text-align: center;
+  padding: 7px 10px;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.file-label {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #000;
+}
+.upload-icon {
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+}
+.file-name {
+  font-size: 14px;
+  font-family: "Roboto", serif;
+  color: #555;
+  margin-top: 5px;
+  word-break: break-word;
+}
+.submit-btn {
+  background-color: #3D4494 !important;
+  color: #fff !important;
+  padding: 5px !important;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 426px) {
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        width: 290px;
+        padding: 10px;
+        border-radius: 15px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      }
+    .job-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .job-title {
+      font-size: 18px;
+    }
+    .job-body, .job-meta, .job-header {
+      padding: 16px 18px;
+    }
+  }

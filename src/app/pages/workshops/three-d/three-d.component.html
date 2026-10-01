@@ -1,0 +1,19 @@
+<div class="workshop-container">
+    <h2 class="workshop-heading">From Concept to Creation: Mastering 3D Design, and Hands-on Practices.</h2>
+    <app-workshop-registration></app-workshop-registration>
+    <div class="workshop-list">
+        <div class="workshop-card" *ngFor="let module of workshopModules">
+            <div class="module-content">
+                <h3 class="module-title">{{ module.title }}</h3>
+                <ul class="bullet-list">
+                    <li *ngFor="let point of module.points">{{ point }}</li>
+                </ul>
+            </div>
+            <!-- Show image only if it exists -->
+            <div class="image-wrapper" *ngIf="module.image">
+                <img [src]="module.image" [alt]="module.title" class="module-img">
+            </div>
+        </div>
+    </div>
+    <app-workshop-gallery [galleryData]="printing3dImages"></app-workshop-gallery>
+</div>
