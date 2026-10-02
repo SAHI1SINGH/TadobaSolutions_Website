@@ -7,7 +7,7 @@
   width: 100%;
   min-height: 70vh;          /* was 100vh */
   overflow: hidden;
-  background-image: url('/assets/images/solar-pv/app/logo.jpeg');
+  background-image: url('https://res.cloudinary.com/duk8n3cqw/image/upload/v1790918772/logo_mcjboh.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

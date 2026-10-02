@@ -1,87 +1,15 @@
-<section
-  class="hero-carousel"
-  (touchstart)="onSwipe($event, 'start')"
-  (touchend)="onSwipe($event, 'end')"
->
-  <!-- Decorative dot grid (top right) -->
-  <div class="deco-grid"></div>
-
-  <div class="slides-wrapper">
-    <div
-      *ngFor="let slide of slides; let i = index"
-      class="slide"
-      [ngClass]="{ 'slide--active': selectedIndex === i }"
-    >
-      <div class="slide__inner">
-        <!-- LEFT: TEXT CONTENT -->
-        <div class="slide__content">
-          <h1 class="slide__title">{{ slide.title }}</h1>
-
-          <p class="slide__subtitle">{{ slide.subtitle }}</p>
-
-          <div class="pills">
-            <div class="pill">
-              <span class="pill__icon">🌱</span>
-              <span>Smart<br />Agriculture</span>
-            </div>
-            <div class="pill">
-              <span class="pill__icon">⚡</span>
-              <span>IoT &amp;<br />Automation</span>
-            </div>
-            <div class="pill">
-              <span class="pill__icon">☀️</span>
-              <span>Solar &amp;<br />Energy</span>
-            </div>
-            <div class="pill">
-              <span class="pill__icon">&lt;/&gt;</span>
-              <span>Software<br />Solutions</span>
-            </div>
-          </div>
-
-          <div class="cta-group">
-            <a
-              *ngIf="slide.navUrl"
-              (click)="scrollToServices()"
-              class="btn btn--primary"
-              style="cursor: pointer;"
-            >
-              Explore Solutions <span class="btn__arrow">→</span>
-            </a>
-            <a routerLink="/our-products" class="btn btn--outline">
-              Our Products <span class="btn__arrow">→</span>
-            </a>
-          </div>
-
-          <!-- Per-slide highlights, changes with each product -->
-          <div class="highlights-row">
-            <ng-container *ngFor="let h of slide.highlights; let last = last">
-              <div class="highlight">
-                <span class="highlight__value">{{ h.value }}</span>
-                <span class="highlight__label">{{ h.label }}</span>
-              </div>
-              <div class="highlight-divider" *ngIf="!last"></div>
-            </ng-container>
-          </div>
-        </div>
-
-        <!-- RIGHT: PRODUCT VISUAL -->
-        <div class="slide__visual">
-          <div class="visual__glow"></div>
-          <div class="visual__frame">
-            <img class="visual__img" [src]="slide.imgUrl" [alt]="slide.title" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Dot indicators, bottom left -->
-  <div *ngIf="indicators" class="dots">
-    <span
-      *ngFor="let slide of slides; let i = index"
-      class="dot"
-      [ngClass]="{ 'dot--active': selectedIndex === i }"
-      (click)="selectImage(i)"
-    ></span>
-  </div>
+<section class="hero-carousel">
+  <video
+    #heroVideo
+    class="hero-video"
+    [src]="videoUrl"
+    [poster]="posterUrl"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    disablePictureInPicture
+    aria-hidden="true"
+  ></video>
 </section>

@@ -89,27 +89,27 @@ export class HomeComponent implements OnInit {
 
   serviceData: ServiceCardData[] = [
     {
-      imgUrl: './assets/images/service/electromechanical.png',
+      imgUrl: 'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790917597/electromechanical_zedf3v.png',
       title: 'Electromechanical Product Design & Development',
       navUrl: 'water-overflow-controller',
     },
     {
-      imgUrl: './assets/images/service/2.png',
+      imgUrl: 'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790917583/2_szwuvb.png',
       title: 'Solar PV Plant/EV/Batteries',
       navUrl: 'solar-pv-plant',
     },
     {
-      imgUrl: './assets/images/service/3.png',
+      imgUrl: 'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790917585/3_r7iqwy.png',
       title: 'Customized Industrial Solutions',
       navUrl: 'contact-us',
     },
     {
-      imgUrl: './assets/images/service/5.png',
+      imgUrl: 'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790917589/5_hhgwyh.png',
       title: 'PCB Design, Development & Fabrication',
       navUrl: 'pcb-design-development',
     },
     {
-      imgUrl: './assets/images/service/6.png',
+      imgUrl: 'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790917590/6_om7w7c.png',
       title: 'Digital Agri Village Products & Solutions',
       navUrl: 'digital-agri-village',
     },

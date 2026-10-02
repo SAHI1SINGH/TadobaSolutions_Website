@@ -11,10 +11,10 @@ import { CommonModule } from '@angular/common';
 export class HeroSectionComponent {
 
   images = [
-    'assets/images/solar-pv/hero-section/logo.png',
-    'assets/images/solar-pv/hero-section/1.png',
-    'assets/images/solar-pv/hero-section/30.jpeg',
-    'assets/images/solar-pv/hero-section/3.jpeg'
+    'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790918680/logo_vfujnw.png',
+    'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790918663/1_ducqzc.png',
+    'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790918674/30_f70app.jpg',
+    'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790918671/3_byupgm.jpg'
   ];
 
 }

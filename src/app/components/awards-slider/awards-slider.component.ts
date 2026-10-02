@@ -23,43 +23,43 @@ declare const Swiper: any;
 export class AwardsSliderComponent implements AfterViewInit {
   awards = [
     {
-      imgUrl: 'assets/images/awards/awards1.JPG',
+      imgUrl: 'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916431/awards1_hpbxmw.jpg',
       title: 'Battery Swapping Compartment with Team Tadoba',
     },
     {
-      imgUrl: 'assets/images/awards/awards2.jpg',
+      imgUrl: 'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916436/awards2_tvcpor.jpg',
       title: 'Energy Trading Station at IIT BHILAI',
     },
     {
-      imgUrl: 'assets/images/awards/awards3.jpg',
+      imgUrl: 'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916433/awards3_up8ley.jpg',
       title:
         'Inauguration of Battery Swapping Station by CM Chhattisgarh and Dr. Raman Singh',
     },
     {
-      imgUrl: 'assets/images/awards/awards4.jpg',
+      imgUrl: 'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916431/awards4_fi4yc1.jpg',
       title: 'Startup Mahakumbh 2025: Ministry of Tribal Affairs',
     },
-    { imgUrl: 'assets/images/awards/awards5.jpg', title: 'Raising Star Award' },
-    { imgUrl: 'assets/images/awards/awards6.jpg', title: 'Tadoba Team' },
+    { imgUrl: 'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916433/awards5_nhqgil.jpg', title: 'Raising Star Award' },
+    { imgUrl: 'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916436/awards6_zchf8y.jpg', title: 'Tadoba Team' },
     {
-      imgUrl: 'assets/images/awards/awards7.jpg',
+      imgUrl: 'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916471/awards7_ieb1k1.jpg',
       title: 'Battery Swapping Station at CREDA (C.G.)',
     },
     
     {
-      imgUrl: 'assets/images/awards/awards9.jpg',
+      imgUrl: 'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916440/awards9_xg8wet.jpg',
       title: 'Kishan Mela at IGKV, Raipur',
     },
     {
-      imgUrl: 'assets/images/awards/awards10.jpg',
+      imgUrl: 'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916444/awards10_wbw0yx.jpg',
       title: 'Making India Employable Award at, The Westin Mumbai Garden',
     },
     {
-      imgUrl: 'assets/images/awards/awards11.jpg',
+      imgUrl: 'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916445/awards11_lkiyb4.jpg',
       title: 'Solar Integrated e-Rickshaw',
     },
     {
-      imgUrl: 'assets/images/awards/awards12.jpg',
+      imgUrl: 'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916448/awards12_taedt9.jpg',
       title: 'IDEATHON 1.0 Project Grant at CSVTU FORTE',
     },
   ];
