@@ -33,8 +33,8 @@ export const ourProductList: Product[] = [
     productPrice: '1350.00',
     productType: 'OUR',
     productImgUrl: [
-      './assets/images/product/1.png',
-      './assets/images/product/1.png',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1791001983/1_bhvopb.png',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1791001983/1_bhvopb.png',
     ],
     productCategory: 'Electronic',
     productDescription: [
@@ -115,8 +115,8 @@ export const ourProductList: Product[] = [
     productPrice: '150.00',
     productType: 'OUR',
     productImgUrl: [
-      './assets/images/product/own-product/TSD2DAC.png',
-      './assets/images/product/own-product/TSD2DAC-2.png',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916898/TSD2DAC_phvtrr.png',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916897/TSD2DAC-2_xs8frd.png',
     ],
     productCategory: 'Electronic',
     productDescription: [
@@ -133,14 +133,14 @@ export const ourProductList: Product[] = [
   },
   {
     productId: 'TSPSSDD',
-    productName: 'FarmEye+ (Solar Power IOT Enabled Soil Health Monitoring System)',
+    productName: 'Agritech (Solar Power IOT Enabled Soil Health Monitoring System)',
     productRating: 3.5,
     productAvailability: 'in-stock',
     productPrice: '50700.00',
     productType: 'OUR',
     productImgUrl: [
-      './assets/images/product/own-product/TSPSSDD.png',
-      './assets/images/product/own-product/TSPSSDD-2.jpg',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916900/TSPSSDD_vh1j9w.png',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916908/TSPSSDD-2_fncydh.jpg',
     ],
     productCategory: 'Electronic',
     productDescription: [
@@ -164,12 +164,12 @@ export const ourProductList: Product[] = [
   },
   {
     productId: 'TSSSDM',
-    productName: 'FarmEye+ (Portable Soil Health Monitoring System With Display)',
+    productName: 'Agritech (Portable Soil Health Monitoring System With Display)',
     productRating: 3.5,
     productAvailability: 'in-stock',
     productPrice: '27500.00',
     productType: 'OUR',
-    productImgUrl: ['./assets/images/product/own-product/TSSSDM.png'],
+    productImgUrl: ['https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916914/TSSSDM_gfa4qp.png'],
     productCategory: 'Electronic',
     productDescription: [
       'Monitors key nutrients: Nitrogen, Phosphorus, Potassium (NPK).',
@@ -196,7 +196,7 @@ export const ourProductList: Product[] = [
     productAvailability: 'in-stock',
     productPrice: '27700.00',
     productType: 'OUR',
-    productImgUrl: ['./assets/images/product/own-product/TSWS.jpg'],
+    productImgUrl: ['https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916926/TSWS_e8jyft.jpg'],
     productCategory: 'Electronic',
     productDescription: [
       'Solar-powered system ensures uninterrupted functionality with renewable energy.',
@@ -224,10 +224,10 @@ export const ourProductList: Product[] = [
     productPrice: '18700.00',
     productType: 'OUR',
     productImgUrl: [
-      './assets/images/product/own-product/TSSACCTV-2.png',
-      './assets/images/product/own-product/TSSACCTV.png',
-      './assets/images/product/own-product/TSSACCTV-3.jpeg',
-      './assets/images/product/own-product/TSSACCTV-4.jpeg',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916905/TSSACCTV-2_sywywn.png',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916904/TSSACCTV_dk7g7b.png',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916906/TSSACCTV-3_jgzzij.jpg',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1790916906/TSSACCTV-4_wpo85n.jpg',
     ],
     productCategory: 'Electronic',
     productDescription: [
@@ -264,10 +264,10 @@ export const retailProductList: Product[] = [
     productPrice: 'contact us',
     productType: 'RETAIL',
     productImgUrl: [
-      './assets/images/product/retail-product/TSMSP.png',
-      './assets/images/product/retail-product/TSMSP-2.png',
-      './assets/images/product/retail-product/TSMSP-3.png',
-      './assets/images/product/retail-product/TSMSP-4.png',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1791002006/TSMSP_iogbbl.png',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1791002003/TSMSP-2_igwxp1.png',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1791002004/TSMSP-3_akabtb.png',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1791002004/TSMSP-4_rc0gv1.png',
     ],
     productCategory: 'Electronic',
     productDescription: [
@@ -294,8 +294,8 @@ export const retailProductList: Product[] = [
     productPrice: '25.00',
     productType: 'RETAIL',
     productImgUrl: [
-      './assets/images/product/retail-product/TSWLS.jpg',
-      './assets/images/product/retail-product/TSWLS-2.jpg',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1791002015/TSWLS_zlceaj.jpg',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1791002015/TSWLS-2_uirbc6.jpg',
     ],
     productCategory: 'Electronic',
     productDescription: [
@@ -320,8 +320,8 @@ export const retailProductList: Product[] = [
     productPrice: '6.00 /mtr.',
     productType: 'RETAIL',
     productImgUrl: [
-      './assets/images/product/retail-product/TSSC.jpg',
-      './assets/images/product/retail-product/TSSC-2.jpg',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1791002016/TSSC_zcavyi.jpg',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1791002012/TSSC-2_mahfxp.jpg',
     ],
     productCategory: 'Electronic',
     productDescription: [
@@ -344,12 +344,12 @@ export const retailProductList: Product[] = [
     productPrice: '750.00',
     productType: 'RETAIL',
     productImgUrl: [
-      './assets/images/product/retail-product/TSACSLD2D.png',
-      './assets/images/product/retail-product/TSACSLD2D-2.jpeg',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1791002000/TSACSLD2D_jyxzuo.png',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1791002002/TSACSLD2D-2_r9bh8z.jpg',
     ],
     productCategory: 'Electronic',
     productDescription: [
-      '2400 Lumens: IP65',
+      '3600 Lumens: IP65',
       'Wide Operating Voltage Range from 110V to 270V AC',
       'Die-cast Aluminum Body for effective heat dissipation',
       'Over Voltage protection up to 440V AC',
@@ -364,14 +364,14 @@ export const retailProductList: Product[] = [
   },
   {
     productId: ' TSACSL',
-    productName: '36 Watts LED Street Light (Lens Model)',
+    productName: '24 Watts LED Street Light (Lens Model)',
     productRating: 3.5,
     productAvailability: 'in-stock',
     productPrice: '650.00',
     productType: 'RETAIL',
     productImgUrl: [
-      './assets/images/product/retail-product/TSACSL.png',
-      './assets/images/product/retail-product/TSACSL-2.jpeg',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1791001999/TSACSL_apilck.png',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1791002001/TSACSL-2_gqpxzj.jpg',
     ],
     productCategory: 'Electronic',
     productDescription: [
@@ -391,18 +391,18 @@ export const retailProductList: Product[] = [
   },
   {
     productId: ' TSACSLD2DWAT',
-    productName: '36 Watts LED Street Light (Lens Model) With Auto Timer D2D',
+    productName: '50 Watts LED Street Light (Lens Model) With Auto Timer D2D',
     productRating: 3.5,
     productAvailability: 'in-stock',
     productPrice: '950.00',
     productType: 'RETAIL',
     productImgUrl: [
-      './assets/images/product/retail-product/TSACSLD2DWAT.png',
-      './assets/images/product/retail-product/TSACSLD2DWAT-2.jpeg',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1791002003/TSACSLD2DWAT_vs8fxo.png',
+      'https://res.cloudinary.com/duk8n3cqw/image/upload/v1791002003/TSACSLD2DWAT-2_w0yjvc.jpg',
     ],
     productCategory: 'Electronic',
     productDescription: [
-      '2400 Lumens: IP65',
+      '5000 Lumens: IP65',
       'Wide Operating Voltage Range from 110V to 270V AC',
       'Die-cast Aluminum Body for effective heat dissipation',
       'Over Voltage protection up to 440V AC',

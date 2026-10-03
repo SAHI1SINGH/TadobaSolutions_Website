@@ -1,0 +1,99 @@
+<!-- Hero -->
+<header class="rp-hero">
+  <div class="rp-container">
+    <nav class="rp-crumbs" aria-label="Breadcrumb">
+      <a routerLink="/">Home</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span>Refund Policy</span>
+    </nav>
+    <h1>Refund Policy</h1>
+    <p class="rp-sub">Clear, fair and simple, so you always know where you stand.</p>
+    <span class="rp-updated"><i class="fa-regular fa-clock"></i> Last updated: {{ company.lastUpdated }}</span>
+  </div>
+</header>
+
+<!-- Highlights -->
+<section class="rp-container rp-highlights">
+  @for (h of highlights; track h.title) {
+    <div class="rp-hl">
+      <span class="rp-hl-icon"><i [class]="h.icon"></i></span>
+      <div>
+        <strong>{{ h.title }}</strong>
+        <span>{{ h.text }}</span>
+      </div>
+    </div>
+  }
+</section>
+
+<!-- Body -->
+<main class="rp-container rp-layout">
+  <aside class="rp-toc">
+    <p class="rp-toc-title">On this page</p>
+    @for (s of sections; track s.id) {
+      <button type="button" [class.active]="active() === s.id" (click)="scrollTo(s.id)">
+        {{ s.title }}
+      </button>
+    }
+    <button type="button" [class.active]="active() === 'by-business'" (click)="scrollTo('by-business')">
+      By Business
+    </button>
+    <button type="button" [class.active]="active() === 'contact'" (click)="scrollTo('contact')">
+      Contact Us
+    </button>
+  </aside>
+
+  <div class="rp-content">
+    @for (s of sections; track s.id) {
+      <section class="rp-card" [id]="s.id">
+        <h2><span class="rp-h-icon"><i [class]="s.icon"></i></span>{{ s.title }}</h2>
+        @if (s.intro) { <p>{{ s.intro }}</p> }
+        @if (s.points) {
+          @if (s.id === 'how-to') {
+            <ol class="rp-steps">
+              @for (p of s.points; track p) { <li>{{ p }}</li> }
+            </ol>
+          } @else {
+            <ul class="rp-list">
+              @for (p of s.points; track p) { <li>{{ p }}</li> }
+            </ul>
+          }
+        }
+      </section>
+    }
+
+    <section class="rp-card" id="by-business">
+      <h2><span class="rp-h-icon"><i class="fa-solid fa-table-list"></i></span>Refunds by Business</h2>
+      <div class="rp-table-wrap">
+        <table class="rp-table">
+          <thead>
+            <tr><th>Business</th><th>Refundable</th><th>Not refundable</th></tr>
+          </thead>
+          <tbody>
+            @for (e of eligibility; track e.business) {
+              <tr>
+                <td data-label="Business"><strong>{{ e.business }}</strong></td>
+                <td data-label="Refundable" class="yes">{{ e.refundable }}</td>
+                <td data-label="Not refundable" class="no">{{ e.nonRefundable }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="rp-contact" id="contact">
+      <div>
+        <h2>Need help with a refund?</h2>
+        <p>Our team usually replies within 24 hours.</p>
+      </div>
+      <ul>
+        <li><i class="fa-solid fa-location-dot"></i>{{ company.name }}, {{ company.address }}</li>
+        <li><i class="fa-solid fa-phone"></i><a [href]="'tel:' + company.phone.replace(' ', '')">{{ company.phone }}</a></li>
+        <li><i class="fa-solid fa-envelope"></i><a [href]="'mailto:' + company.email">{{ company.email }}</a></li>
+      </ul>
+      <a class="rp-btn" [href]="'mailto:' + company.email + '?subject=Refund%20Request'">
+        Request a Refund <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </section>
+  </div>
+</main>

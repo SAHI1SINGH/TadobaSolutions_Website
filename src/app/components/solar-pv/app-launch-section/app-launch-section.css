@@ -225,7 +225,7 @@
 @media (max-width: 1024px) {
 
   .app-content-overlay {
-    background-image: url('/images/home/app/app2.png');
+    background-image: url('https://res.cloudinary.com/duk8n3cqw/image/upload/v1791003698/app2_u7m9ql.png');
     background-size: 40% auto;
     background-position: right 20px;
     background-repeat: no-repeat;

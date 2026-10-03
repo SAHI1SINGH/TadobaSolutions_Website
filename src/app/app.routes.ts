@@ -19,6 +19,8 @@ import { WaterOverflowControllerComponent } from './pages/service&maintenance/wa
 import { ThreeDServiceComponent } from './pages/service&maintenance/three-d-service/three-d-service.component';
 import { PcbComponent } from './pages/service&maintenance/pcb/pcb.component';
 import { SoftwareDevelopmentComponent } from './pages/software-development/software-development.component';
+import { RefundPolicyComponent } from './pages/refund-policy/refund-policy';
+import { ShippingPolicyComponent } from './pages/shipping-policy/shipping-policy';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -46,4 +48,6 @@ export const routes: Routes = [
   { path: '3d-design-printing-service', component: ThreeDServiceComponent },
   { path: 'pcb-design-development', component: PcbComponent },
   { path: 'software-development', component: SoftwareDevelopmentComponent },
+  { path: 'refund-policy', component: RefundPolicyComponent },
+  { path: 'shipping-policy', component: ShippingPolicyComponent },
 ];
