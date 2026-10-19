@@ -1,0 +1,82 @@
+<ng-container *ngIf="activity as a; else notFound">
+  <!-- HERO -->
+  <header
+    class="ad-hero"
+    [style.background-image]="a.image ? 'url(' + a.image + ')' : null"
+  >
+    <div class="ad-hero-inner">
+      <a class="ad-back" routerLink="/operation-maintenance" fragment="om-activities">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
+        Back to Operation &amp; Maintenance
+      </a>
+      <span class="ad-tag">{{ a.tag }}</span>
+      <h1>{{ a.title }}</h1>
+      <p class="ad-meta">
+        <span>{{ a.date }}</span>
+        <span class="ad-dot"></span>
+        <span>{{ a.readTime }}</span>
+      </p>
+    </div>
+  </header>
+
+  <!-- ARTICLE -->
+  <article class="ad-article">
+    <p class="ad-lead">{{ a.intro }}</p>
+
+    <section class="ad-block" *ngFor="let s of a.sections">
+      <h2>{{ s.heading }}</h2>
+      <p *ngFor="let p of s.paragraphs">{{ p }}</p>
+      <ul class="ad-list" *ngIf="s.bullets?.length">
+        <li *ngFor="let b of s.bullets">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 7L9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z" />
+          </svg>
+          <span>{{ b }}</span>
+        </li>
+      </ul>
+    </section>
+
+    <aside class="ad-takeaways">
+      <h3>Key takeaways</h3>
+      <ul>
+        <li *ngFor="let t of a.takeaways">{{ t }}</li>
+      </ul>
+    </aside>
+  </article>
+
+  <!-- MORE ACTIVITIES -->
+  <section class="ad-more" *ngIf="related.length">
+    <h2>More Activities</h2>
+    <div class="ad-more-grid">
+      <a class="ad-card" *ngFor="let r of related" [routerLink]="[base, r.slug]">
+        <div
+          class="ad-card-img"
+          [style.background-image]="r.image ? 'url(' + r.image + ')' : null"
+        >
+          <span class="ad-card-tag">{{ r.tag }}</span>
+        </div>
+        <h3>{{ r.title }}</h3>
+        <p>{{ r.excerpt }}</p>
+        <span class="ad-card-link">
+          Read article
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="ad-cta">
+    <h2>Want this kind of care for your solar plant?</h2>
+    <p>Tell us about your site and we will suggest a maintenance plan that fits.</p>
+    <a class="ad-btn" routerLink="/contact-us">Get in Touch</a>
+  </section>
+</ng-container>
+
+<ng-template #notFound>
+  <section class="ad-missing">
+    <h1>Article not found</h1>
+    <p>The activity you are looking for may have moved or no longer exists.</p>
+    <a class="ad-btn" routerLink="/operation-maintenance">Back to Operation &amp; Maintenance</a>
+  </section>
+</ng-template>

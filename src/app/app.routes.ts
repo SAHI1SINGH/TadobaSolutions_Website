@@ -21,6 +21,9 @@ import { PcbComponent } from './pages/service&maintenance/pcb/pcb.component';
 import { SoftwareDevelopmentComponent } from './pages/software-development/software-development.component';
 import { RefundPolicyComponent } from './pages/refund-policy/refund-policy';
 import { ShippingPolicyComponent } from './pages/shipping-policy/shipping-policy';
+import { OmComponent } from './pages/service&maintenance/opeartion&maintenance/om.component';
+import { ActivityDetailComponent } from './pages/activity-detail.component/activity-detail.component';
+import { SolarQueryComponent } from './pages/solar-query.component/solar-query.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -50,4 +53,10 @@ export const routes: Routes = [
   { path: 'software-development', component: SoftwareDevelopmentComponent },
   { path: 'refund-policy', component: RefundPolicyComponent },
   { path: 'shipping-policy', component: ShippingPolicyComponent },
+  { path: 'operation-maintenance', component: OmComponent },
+  { path: 'solar-query', component: SolarQueryComponent },
+  {
+    path: 'operation-maintenance/activity/:slug',
+    component: ActivityDetailComponent,
+  },
 ];

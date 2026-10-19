@@ -5,6 +5,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-career',
@@ -16,6 +18,8 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     MatButtonModule,
     MatIconModule,
+    MatSelectModule,
+    MatSnackBarModule,
     ReactiveFormsModule
   ],
   templateUrl: './career.component.html',
@@ -23,39 +27,123 @@ import { MatInputModule } from '@angular/material/input';
 })
 export class CareerComponent {
 
+  private readonly scriptUrl = 'https://script.google.com/macros/s/AKfycbxFf3I-HceeM44L7aU3yLmb11wFX6kMagWL2dMpAz06XQyhX0zrNB9l2JF5x2Z1MhA9kw/exec';
+
+  private readonly maxFileSize = 5 * 1024 * 1024;
+
+  jobOpenings: string[] = [
+    'Embedded Engineer',
+    'Solar - Site Inspection',
+    'Solar - Operation and Maintenance',
+    'Marketing Department'
+  ];
+
   careerForm!: FormGroup;
 
+  selectedFile: File | null = null;
   fileName: string | null = null;
+  fileError = '';
+  isSubmitting = false;
+  submitted = false;
 
-  private readonly googleFormUrl = 'https://forms.gle/Sde4rmSZc9zsK5TY9';
-
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private snackBar: MatSnackBar) {
     this.careerForm = this.fb.group({
+      position: ['', [Validators.required]],
       fullName: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
-      phoneNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
-      location: ['', [Validators.required]],
-      query: ['']
+      place: ['', [Validators.required]]
     });
-  }
-
-  applyNow(): void {
-    window.open(this.googleFormUrl, '_blank', 'noopener,noreferrer');
   }
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
-    if (input?.files && input.files.length > 0) {
-      this.fileName = input.files[0].name;
-    } else {
-      this.fileName = null;
+    this.fileError = '';
+    this.selectedFile = null;
+    this.fileName = null;
+
+    if (!input?.files || input.files.length === 0) {
+      return;
+    }
+
+    const file = input.files[0];
+
+    if (file.type !== 'application/pdf') {
+      this.fileError = 'Only PDF files are allowed';
+      input.value = '';
+      return;
+    }
+    if (file.size > this.maxFileSize) {
+      this.fileError = 'File size must be under 5 MB';
+      input.value = '';
+      return;
+    }
+
+    this.selectedFile = file;
+    this.fileName = file.name;
+  }
+
+  async submitCareerForm(): Promise<void> {
+    this.submitted = true;
+    this.careerForm.markAllAsTouched();
+
+    if (this.careerForm.invalid || !this.selectedFile || this.fileError) {
+      return;
+    }
+
+    this.isSubmitting = true;
+
+    try {
+      const base64 = await this.readFileAsBase64(this.selectedFile);
+
+      const payload = {
+        position: this.careerForm.value.position,
+        fullName: this.careerForm.value.fullName.trim(),
+        place: this.careerForm.value.place.trim(),
+        fileName: this.selectedFile.name,
+        fileData: base64
+      };
+
+      const response = await fetch(this.scriptUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await response.json();
+
+      if (result.success === true) {
+        this.snackBar.open('Application submitted successfully!', 'Close', { duration: 5000 });
+        this.resetForm();
+      } else {
+        this.snackBar.open('Could not submit. Please try again.', 'Close', { duration: 5000 });
+      }
+    } catch {
+      this.snackBar.open('Something went wrong. Please try again.', 'Close', { duration: 5000 });
+    } finally {
+      this.isSubmitting = false;
     }
   }
 
-  submitCareerForm() {
-    if (this.careerForm.invalid) {
-      this.careerForm.markAllAsTouched();
-    }
+  private readFileAsBase64(file: File): Promise<string> {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const result = reader.result as string;
+        resolve(result.split(',')[1]);
+      };
+      reader.onerror = () => reject(reader.error);
+      reader.readAsDataURL(file);
+    });
   }
 
+  private resetForm(): void {
+    this.careerForm.reset({ position: '', fullName: '', place: '' });
+    this.selectedFile = null;
+    this.fileName = null;
+    this.fileError = '';
+    this.submitted = false;
+    const fileInput = document.getElementById('uploadBtn') as HTMLInputElement | null;
+    if (fileInput) {
+      fileInput.value = '';
+    }
+  }
 }

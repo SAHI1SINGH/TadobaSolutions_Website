@@ -48,34 +48,11 @@
           </a>
         </li>
 
-        <li class="nav-item dropdown" (mouseenter)="onDropdownEnter($event)">
-          <button class="nav-link">
-            <span>Services & Maintenance</span>
-            <fa-icon [icon]="angleDown" class="dropdown-icon"></fa-icon>
-          </button>
-          <div class="dropdown-menu wide-menu">
-            <ul class="dropdown-list">
-              <li class="dropdown-item">
-                <a routerLink="water-overflow-controller" class="dropdown-link"
-                  >Water Overflow Control Solutions</a
+         <li class="nav-item">
+                <a routerLink="operation-maintenance" class="nav-link"
+                  >Solar O&M</a
                 >
               </li>
-              <!-- <li class="dropdown-item">
-                                            <a class="dropdown-link">Electromechanical Product Design & Development</a>
-                                        </li> -->
-              <li class="dropdown-item">
-                <a routerLink="pcb-design-development" class="dropdown-link"
-                  >PCB Design, Development & Fabrication</a
-                >
-              </li>
-              <li class="dropdown-item">
-                <a routerLink="3d-design-printing-service" class="dropdown-link"
-                  >3D Prototype Product Design & Printing</a
-                >
-              </li>
-            </ul>
-          </div>
-        </li>
 
         <li class="nav-item">
           <a routerLink="career" class="nav-link">
@@ -162,52 +139,13 @@
         </a>
       </li>
 
-      <li class="mobile-nav-item accordion">
-        <button
-          class="mobile-nav-link"
-          (click)="toggleDropdown('servicesMaintenance')"
-        >
-          <span>Services & Maintenance</span>
-          <fa-icon
-            [icon]="angleDown"
-            [class.rotated]="dropdowns['servicesMaintenance']"
-            class="accordion-icon"
-          ></fa-icon>
-        </button>
-        <div
-          class="accordion-content"
-          *ngIf="dropdowns['servicesMaintenance']"
-          [ngClass]="{ active: dropdowns['servicesMaintenance'] }"
-        >
-          <ul class="mobile-dropdown-list">
-            <li class="mobile-dropdown-item">
-              <a
-                routerLink="water-overflow-controller"
-                class="mobile-dropdown-link"
-                >Water Overflow Control Solutions</a
-              >
-            </li>
-            <!-- <li class="mobile-dropdown-item">
-                                    <a class="mobile-dropdown-link">Electromechanical Product Design &
-                                        Development</a>
-                                </li> -->
-            <li class="mobile-dropdown-item">
-              <a
-                routerLink="pcb-design-development"
-                class="mobile-dropdown-link"
-                >PCB Design, Development & Fabrication</a
-              >
-            </li>
-            <li class="mobile-dropdown-item">
-              <a
-                routerLink="3d-design-printing-service"
-                class="mobile-dropdown-link"
-                >3D Prototype Product Design & Printing</a
-              >
-            </li>
-          </ul>
-        </div>
+      <li class="mobile-nav-item">
+        <a routerLink="operation-maintenance" class="mobile-nav-link">
+          <span>Solar O&M</span>
+        </a>
       </li>
+
+      
 
       <li class="mobile-nav-item">
         <a routerLink="career" class="mobile-nav-link">

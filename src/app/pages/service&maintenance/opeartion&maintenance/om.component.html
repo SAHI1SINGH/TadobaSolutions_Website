@@ -1,0 +1,135 @@
+<!-- HERO -->
+<section class="om-hero">
+  <div class="om-hero-bg">
+    <img [src]="heroImage" alt="Solar plant operation and maintenance" />
+  </div>
+  <div class="om-hero-overlay"></div>
+
+  <div class="om-hero-content">
+    <h1>Solar Operation &amp; Maintenance Services for Industrial &amp; Commercial Solar Plants</h1>
+    <p>
+      We help solar asset owners maximize plant performance through preventive
+      maintenance, advanced diagnostics, and reliable technical support for
+      rooftop and ground-mounted solar power plants.
+    </p>
+    <button class="om-btn" (click)="scrollTo('om-about')">Learn More</button>
+  </div>
+
+  <button class="om-scroll" (click)="scrollTo('om-about')" aria-label="Scroll down">
+    <svg viewBox="0 0 24 24"><path d="M11 4h2v12.17l5.59-5.58L20 12l-8 8-8-8 1.41-1.41L11 16.17z" /></svg>
+  </button>
+
+  <!-- Full-width yellow query bar -->
+  <a class="om-query-bar" routerLink="/solar-query">
+  <span class="om-query-text">Have a query about your solar plant? Talk to our experts</span>
+  <svg class="om-query-arrow" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4 11h12.17l-5.58-5.59L12 4l8 8-8 8-1.41-1.41L16.17 13H4z" />
+  </svg>
+</a>
+</section>
+
+<!-- Remember: add id="om-contact" to your CTA section:
+<section class="om-cta" id="om-contact"> -->
+
+<!-- ABOUT US -->
+<section id="om-about" class="om-section">
+  <div class="om-about">
+    <div class="om-about-text">
+      <span class="om-eyebrow">About Us</span>
+      <h2>Keeping Your Solar Assets Productive for Years</h2>
+      <p>
+        We are a dedicated team focused on the day-to-day health of solar
+        photovoltaic plants. From rooftop systems on factories to large
+        ground-mounted installations, we combine hands-on field experience with
+        data-driven analysis to protect your generation and your returns.
+      </p>
+      <ul class="om-checks">
+        <li *ngFor="let p of aboutPoints">
+          <svg viewBox="0 0 24 24"><path d="M21 7L9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z" /></svg>
+          <span>{{ p }}</span>
+        </li>
+      </ul>
+      <a class="om-btn" routerLink="/about-us">Learn More</a>
+    </div>
+
+    <div class="om-about-media">
+      <img *ngIf="aboutImage" [src]="aboutImage" alt="Solar maintenance team at work" />
+      <div *ngIf="!aboutImage" class="om-media-fallback"></div>
+      <div class="om-badge">
+        <strong>O&amp;M</strong>
+        <span>Rooftop &amp; Ground-Mounted</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR SERVICES -->
+<section id="om-services" class="om-section om-alt">
+  <div class="om-heading">
+    <span class="om-eyebrow">What We Offer</span>
+    <h2>Our Services</h2>
+    <p>End-to-end care for every stage of your plant's operating life.</p>
+  </div>
+
+  <div class="om-grid">
+    <article class="om-card" *ngFor="let s of services">
+      <div class="om-icon">
+        <svg viewBox="0 0 24 24"><path [attr.d]="s.icon" /></svg>
+      </div>
+      <h3>{{ s.title }}</h3>
+      <p>{{ s.description }}</p>
+      <!-- <a class="om-link" [routerLink]="s.link">
+        Learn more
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+      </a> -->
+    </article>
+  </div>
+</section>
+
+<!-- OUR ACTIVITIES -->
+<section id="om-activities" class="om-section">
+  <div class="om-heading">
+    <span class="om-eyebrow">Latest</span>
+    <h2>Our Activities</h2>
+    <p>Updates, learnings and stories from our work in the field.</p>
+  </div>
+
+  <div class="om-activities">
+    <!-- Poora card clickable hai: click par us article ka detail page khulta hai -->
+    <a
+      class="om-activity"
+      *ngFor="let a of activities"
+      [routerLink]="[activityBase, a.slug]"
+    >
+      <div class="om-activity-img">
+        <img *ngIf="a.image" [src]="a.image" [alt]="a.title" />
+        <span class="om-tag">{{ a.tag }}</span>
+      </div>
+      <h3>{{ a.title }}</h3>
+      <span class="om-activity-more">
+        Read article
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+      </span>
+    </a>
+  </div>
+
+  <!-- <div class="om-center">
+    <a class="om-btn om-btn-dark" routerLink="/activity">Read More</a>
+  </div> -->
+</section>
+
+<!-- CONTACT CTA -->
+<section class="om-cta">
+  <h2>Get in touch with us to know more about our services</h2>
+  <a class="om-btn" routerLink="/contact-us">Contact Us</a>
+</section>
+
+<!-- DIY INSPECTION BANNER
+<section class="om-diy">
+  <div class="om-diy-text">
+    <span class="om-eyebrow">Self-Service</span>
+    <h2>Run a quick DIY inspection of your solar plant</h2>
+    <p>Follow guided steps, log observations and get an instant status summary, anytime.</p>
+  </div>
+  <a class="om-btn" routerLink="/diy-inspection">Know More</a>
+</section> -->

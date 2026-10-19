@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:host {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  color: #0f172a;
+}
+
+/* ---------- BUTTONS ---------- */
+.om-btn {
+  display: inline-block;
+  background: #ffe600;
+  color: #111;
+  border: none;
+  border-radius: 999px;
+  padding: 16px 38px;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.om-btn:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 10px 25px rgba(255, 230, 0, 0.35);
+}
+
+.om-btn-dark {
+  background: #0f172a;
+  color: #fff;
+}
+
+.om-btn-dark:hover {
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.3);
+}
+
+/* ---------- HERO ---------- */
+.om-hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 72px; /* space for the query bar */
+  box-sizing: border-box;
+}
+
+.om-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.om-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85) contrast(1.05);
+}
+
+.om-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, rgba(8, 14, 24, 0.3), rgba(5, 10, 20, 0.55));
+}
+
+.om-hero-content {
+  max-width: 1100px;
+  padding: 20px 24px;
+  animation: omFadeUp 1s ease-out;
+}
+
+.om-hero-content h1 {
+  font-size: clamp(2.2rem, 5.2vw, 4.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.om-hero-content p {
+  font-size: clamp(1rem, 1.7vw, 1.4rem);
+  line-height: 1.7;
+  max-width: 850px;
+  margin: 0 auto 20px;
+  color: #f1f5f9;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+}
+
+.om-scroll {
+  position: absolute;
+  bottom: 96px; /* moved above the query bar */
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  animation: omBounce 1.8s infinite;
+}
+
+.om-scroll svg {
+  width: 38px;
+  height: 38px;
+  fill: #fff;
+}
+
+/* ---------- HERO QUERY BAR ---------- */
+.om-query-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 22px 16px;
+  border: none;
+  background: #ffe600;
+  color: #111;
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition: background 0.25s ease;
+  text-decoration: none;
+}
+
+.om-query-bar:hover {
+  background: #ffd900;
+}
+
+.om-query-arrow {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.om-query-bar:hover .om-query-arrow {
+  transform: translateX(6px);
+}
+
+/* ---------- SHARED SECTION ---------- */
+.om-section {
+  padding: 20px 20px;
+}
+
+.om-section > * {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.om-alt {
+  background: #f1f5f9;
+}
+
+.om-heading {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.om-eyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #2e7d32;
+  margin-bottom: 6px;
+}
+
+.om-heading h2 {
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.om-heading p {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.om-center {
+  text-align: center;
+  margin-top: 24px;
+}
+
+/* ---------- ABOUT ---------- */
+.om-about {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.om-about-text h2 {
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.om-about-text p {
+  color: #475569;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.om-checks {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.om-checks li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.om-checks svg {
+  width: 22px;
+  height: 22px;
+  fill: #2e7d32;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.om-about-media {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 420px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+}
+
+.om-about-media img,
+.om-media-fallback {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.om-media-fallback {
+  background: linear-gradient(135deg, #0f1e32, #14532d);
+}
+
+.om-badge {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  background: #ffe600;
+  color: #111;
+  padding: 14px 22px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.om-badge strong {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.om-badge span {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ---------- SERVICES ---------- */
+.om-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.om-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.om-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.om-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: #e8f5e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  transition: background 0.3s ease;
+}
+
+.om-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: none;
+  stroke: #2e7d32;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.3s ease;
+}
+
+.om-card:hover .om-icon {
+  background: #2e7d32;
+}
+
+.om-card:hover .om-icon svg {
+  stroke: #fff;
+}
+
+.om-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.om-card p {
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+
+.om-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #2e7d32;
+  text-decoration: none;
+}
+
+.om-link svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s ease;
+}
+
+.om-link:hover svg {
+  transform: translateX(6px);
+}
+
+/* ---------- ACTIVITIES ---------- */
+.om-activities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Card ab <a> hai (clickable), isliye link ke default styles reset kiye */
+.om-activity {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.om-activity-img {
+  position: relative;
+  height: 240px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #14532d, #0f1e32);
+  margin-bottom: 10px;
+}
+
+.om-activity-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.om-activity:hover .om-activity-img img {
+  transform: scale(1.08);
+}
+
+.om-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #ffe600;
+  color: #111;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.om-activity h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.om-activity:hover h3 {
+  color: #2e7d32;
+}
+
+.om-activity-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #2e7d32;
+}
+
+.om-activity-more svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s ease;
+}
+
+.om-activity:hover .om-activity-more svg {
+  transform: translateX(6px);
+}
+
+/* ---------- CONTACT CTA ---------- */
+.om-cta {
+  text-align: center;
+  padding: 20px 20px;
+  color: #fff;
+  background: linear-gradient(135deg, #0f1e32, #14532d);
+}
+
+.om-cta h2 {
+  font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  max-width: 850px;
+  margin: 0 auto 16px;
+  line-height: 1.3;
+}
+
+/* ---------- DIY BANNER ---------- */
+.om-diy {
+  max-width: 1280px;
+  margin: 20px auto;
+  padding: 24px 32px;
+  border-radius: 24px;
+  background: #fffbe0;
+  border: 2px solid #ffe600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.om-diy-text h2 {
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.om-diy-text p {
+  color: #475569;
+  font-size: 1.05rem;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes omFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes omBounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 10px); }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .om-about { grid-template-columns: 1fr; }
+  .om-grid,
+  .om-activities { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .om-diy {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 20px;
+    margin: 20px 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .om-section { padding: 20px 16px; }
+  .om-grid,
+  .om-activities,
+  .om-checks { grid-template-columns: 1fr; }
+  .om-btn { padding: 14px 30px; font-size: 1rem; }
+  .om-about-media,
+  .om-about-media img,
+  .om-media-fallback { min-height: 300px; }
+
+  /* hero query bar */
+  .om-hero { padding-bottom: 64px; }
+  .om-scroll { bottom: 84px; }
+  .om-query-bar {
+    font-size: 0.92rem;
+    padding: 18px 12px;
+    gap: 10px;
+  }
+  .om-query-arrow { width: 18px; height: 18px; }
+}
