@@ -1,6 +1,6 @@
 <section class="sq-page">
   <div class="sq-wrap">
-    <a routerLink="/" class="sq-back">← Back to home</a>
+    <a routerLink="/operation-maintenance" class="sq-back">← Back to home</a>
 
     <div class="sq-head">
       <span class="sq-eyebrow">Talk to our experts</span>
@@ -12,54 +12,59 @@
     </div>
 
     <form class="sq-form" [formGroup]="form" (ngSubmit)="sendToWhatsApp()" novalidate>
-      <div class="sq-row">
-        <div class="sq-field">
-          <label for="name">Your Name *</label>
-          <input id="name" type="text" formControlName="name" placeholder="Enter your name" />
-          <small class="sq-err" *ngIf="f['name'].invalid && (f['name'].touched || submitted)">
-            Please enter your name.
-          </small>
+      <div class="sq-grid">
+
+        <!-- LEFT: stacked fields -->
+        <div class="sq-left">
+          <div class="sq-field">
+            <label for="name">Your Name *</label>
+            <input id="name" type="text" formControlName="name" placeholder="Enter your name" />
+            <small class="sq-err" *ngIf="f['name'].invalid && (f['name'].touched || submitted)">
+              Please enter your name.
+            </small>
+          </div>
+
+          <div class="sq-field">
+            <label for="phone">Phone Number *</label>
+            <input id="phone" type="tel" formControlName="phone" placeholder="10-digit mobile number" />
+            <small class="sq-err" *ngIf="f['phone'].invalid && (f['phone'].touched || submitted)">
+              Please enter a valid phone number.
+            </small>
+          </div>
+
+          <div class="sq-field">
+            <label for="plantType">Plant Type</label>
+            <select id="plantType" formControlName="plantType">
+              <option *ngFor="let t of plantTypes" [value]="t">{{ t }}</option>
+            </select>
+          </div>
+
+          <div class="sq-field">
+            <label for="capacity">Plant Capacity (optional)</label>
+            <input id="capacity" type="text" formControlName="capacity" placeholder="e.g. 100 kW" />
+          </div>
+
+          <div class="sq-field">
+            <label for="location">Plant Location (optional)</label>
+            <input id="location" type="text" formControlName="location" placeholder="City / District" />
+          </div>
         </div>
 
-        <div class="sq-field">
-          <label for="phone">Phone Number *</label>
-          <input id="phone" type="tel" formControlName="phone" placeholder="10-digit mobile number" />
-          <small class="sq-err" *ngIf="f['phone'].invalid && (f['phone'].touched || submitted)">
-            Please enter a valid phone number.
-          </small>
-        </div>
-      </div>
-
-      <div class="sq-row">
-        <div class="sq-field">
-          <label for="plantType">Plant Type</label>
-          <select id="plantType" formControlName="plantType">
-            <option *ngFor="let t of plantTypes" [value]="t">{{ t }}</option>
-          </select>
+        <!-- RIGHT: query box fills all remaining height -->
+        <div class="sq-right">
+          <div class="sq-field sq-field-fill">
+            <label for="query">Your Query *</label>
+            <textarea
+              id="query"
+              formControlName="query"
+              placeholder="Describe the issue or the service you need..."
+            ></textarea>
+            <small class="sq-err" *ngIf="f['query'].invalid && (f['query'].touched || submitted)">
+              Please write your query (at least 10 characters).
+            </small>
+          </div>
         </div>
 
-        <div class="sq-field">
-          <label for="capacity">Plant Capacity (optional)</label>
-          <input id="capacity" type="text" formControlName="capacity" placeholder="e.g. 100 kW" />
-        </div>
-      </div>
-
-      <div class="sq-field">
-        <label for="location">Plant Location (optional)</label>
-        <input id="location" type="text" formControlName="location" placeholder="City / District" />
-      </div>
-
-      <div class="sq-field">
-        <label for="query">Your Query *</label>
-        <textarea
-          id="query"
-          rows="6"
-          formControlName="query"
-          placeholder="Describe the issue or the service you need..."
-        ></textarea>
-        <small class="sq-err" *ngIf="f['query'].invalid && (f['query'].touched || submitted)">
-          Please write your query (at least 10 characters).
-        </small>
       </div>
 
       <button type="submit" class="sq-submit">
